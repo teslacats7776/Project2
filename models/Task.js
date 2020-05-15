@@ -27,7 +27,7 @@ module.exports = function (sequelize, DataTypes) {
         // Each Task belongs to one Project
         models.Task.belongsTo(models.Project)
         // Each Task belongs to one Team Member
-        models.Task.hasOne(models.TeamMember)
+        models.Task.belongsTo(models.TeamMember)
       }
 
       return Task;

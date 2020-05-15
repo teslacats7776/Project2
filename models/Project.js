@@ -24,10 +24,11 @@ module.exports = function (sequelize, DataTypes) {
     // Each Project belongs to A Project Manager
     models.Project.belongsTo(models.ProjectManager, { as: "Manager" })
     // Each Project can have many Team Members
-    models.Project.hasMany(models.TeamMember)
+    models.Project.belongsToMany(models.TeamMember, {
+      as: "Project",
+      through: "Team Member Projects"})
     // Each Project can have many Tasks
     models.Project.hasMany(models.Task)
   }
     return Project;
   }
-  

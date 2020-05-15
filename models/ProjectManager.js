@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
           len: [2]
         }
       },
-      project_manager: {
+      manager: {
         type: DataTypes.BOOLEAN,
         default: true,
         allowNull: false,
@@ -48,8 +48,6 @@ module.exports = function (sequelize, DataTypes) {
       models.ProjectManager.hasMany(models.TeamMember)
       // Each Project Manager has many Projects
       models.ProjectManager.hasMany(models.Project)
-      // Each Project Manager has one Role
-      models.ProjectManager.hasOne(models.Role)
     }
 
     return ProjectManager;

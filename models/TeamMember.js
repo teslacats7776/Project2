@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
           len: [2]
         }
       },
-      team_member: {
+      team: {
         type: DataTypes.BOOLEAN,
         default: true,
         allowNull: false,
@@ -50,8 +50,6 @@ module.exports = function (sequelize, DataTypes) {
         models.TeamMember.hasOne(models.Project)
         // Each Team Member has one Task
         models.TeamMember.hasOne(models.Task)
-        // Each Team Member has one Role
-        models.TeamMember.hasOne(models.Role)
       }
 
     return TeamMember;
