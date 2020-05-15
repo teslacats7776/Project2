@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
       },
       project_status: {
         type: DataTypes.DECIMAL(2, 2),
-        allowNull: false,
+        allowNull: true,
       },
     }, 
     { timestamps: false },
