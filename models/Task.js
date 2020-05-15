@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
       },
       task_comment: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [2]
         }
