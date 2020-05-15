@@ -21,5 +21,14 @@ module.exports = function (sequelize, DataTypes) {
     }, 
         { timestamps: false },
     );
-        return Task;
+
+      // associating Tasks to Projects and Team Members
+      Task.associate = function(models){
+        // Each Task belongs to one Project
+        models.Task.belongsTo(models.Project)
+        // Each Task belongs to one Team Member
+        models.Task.hasOne(models.TeamMember)
+      }
+
+      return Task;
 };

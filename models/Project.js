@@ -18,6 +18,16 @@ module.exports = function (sequelize, DataTypes) {
     }, 
     { timestamps: false },
     );
+
+    // associating Projects table to Tasks, Team Members and Project Managers
+    Project.associate = function(models){
+    // Each Project belongs to A Project Manager
+    models.Project.belongsTo(models.ProjectManager, { as: "Manager" })
+    // Each Project can have many Team Members
+    models.Project.hasMany(models.TeamMember)
+    // Each Project can have many Tasks
+    models.Project.hasMany(models.Task)
+  }
     return Project;
-  };
+  }
   

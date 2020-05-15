@@ -15,5 +15,14 @@ module.exports = function (sequelize, DataTypes) {
   }, 
   { timestamps: false },
   );
+
+    // associating Roles to Project Managers and Team Members
+    Role.associate = function(models){
+      // Each Role has many Project Managers
+      models.Role.hasMany(models.ProjectManager)
+      // Each Role has many Team Members
+      models.Role.hasMany(models.TeamMember)
+    }
+
   return Role;
 };

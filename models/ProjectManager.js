@@ -41,5 +41,16 @@ module.exports = function (sequelize, DataTypes) {
       }, 
     { timestamps: false },
     );
+
+    // associating Projects Manager table to Team Members and Projects
+    ProjectManager.associate = function(models){
+      // Each Project Manager has many Team Members
+      models.ProjectManager.hasMany(models.TeamMember)
+      // Each Project Manager has many Projects
+      models.ProjectManager.hasMany(models.Project)
+      // Each Project Manager has one Role
+      models.ProjectManager.hasOne(models.Role)
+    }
+
     return ProjectManager;
   };

@@ -41,5 +41,18 @@ module.exports = function (sequelize, DataTypes) {
       }, 
     { timestamps: false },
     );
+
+      // associating Team Members to Project Managers, Projects, Tasks and Role
+      TeamMember.associate = function(models){
+        // Each Team Member belongs to one Project Manager
+        models.TeamMember.belongsTo(models.ProjectManager)
+        // Each Team Member has one Project
+        models.TeamMember.hasOne(models.Project)
+        // Each Team Member has one Task
+        models.TeamMember.hasOne(models.Task)
+        // Each Team Member has one Role
+        models.TeamMember.hasOne(models.Role)
+      }
+
     return TeamMember;
   };
