@@ -3,9 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Manager</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" href="./images/favicon.png" type="image/png" sizes="16x16">
+    <title>tuesday.com</title>
 </head>
 <body>
+    <nav class="white">
+        <div class="row header">
+            <div class="container main">
+              <p href="" class="tuesday center blue-text"> tuesday.com</p>
+              <a href="#" data-activates="dropdown1" class="right dropdown-button blue-text"><i class="material-icons right hide-on-med-and-up">menu</i></a>
+              <ul class="right dropdown-content" id="dropdown1">
+                <li><a class="blue-text" href="#">Home</a></li>
+                <li><a class="blue-text" href="#">About</a></li>
+                <li><a class="blue-text" href="#">Services</a></li>
+              </ul>
+              <ul class = "right hide-on-small-only navMenu">
+                <li><a class="blue-text" href="#">Home</a></li>
+                <li><a class="blue-text" href="#">About</a></li>
+                <li><a class="blue-text" href="#">Contact</a></li>
+              </ul>
+            </div> <!-- end internal container -->
+        </div> 
+    </nav>
+<br>
+    <!-- CLEAR -->
+    <div class="clearfix"></div>
+
+    <div class="row blue blueBorder">
+        <div class="container">
+            <img id="logo" class="left" src="./images/logo.png" alt="logo">
+            <h6 class="white-text tagline">...because three day weekends</h6>
+        </div>
+    </div>
+
+    <div class="container bodyContainer">
+
+    <!-- MODAL BUTTONS -->
+    <div class="row modalRow">
+    <a href="#modal1" id="signIn" class="btn waves-effect right light-blue darken-2">Sign-In</a>
+    <a href="#modal2"  id="signUp" class="btn waves-effect right orange darken-2">Sign Up!</a>
+    </div>
+
+    <!-- MODAL CONTENT -->
+    <div id="modal1" class="modal">
+            <div class="modal-content center">
+                <h4 class = "light-blue-text darken-2">Sign In!</h4>
+                <form>
+                  <div class="input-field ">
+                    <input type="email" id="email" class="validate">
+                    <label class="active" for="email">Email</label>
+                  </div>
+                  <div class="row">
+                      <div class="input-field">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                </form>
+              </div>
+        <div class="modal-footer">
+          <button href="" class="btn modal-action modal-close white-text light-blue darken-2">CLOSE</button>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+            <div class="modal-content center">
+                <h4 class ="orange-text darken-2">Fill in the form to sign up!</h4>
+                <form>
+                    <div class="input-field">
+                      <input type="text" id="firstName">
+                      <label class="active" for="firstName">First Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="LastName">
+                        <label class="active" for="LastName">Last Name</label>
+                    </div>
+                    <div class="input-field ">
+                      <input type="email" id="email" class="validate">
+                      <label class="active" for="email">Email</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Password</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button href="" class="btn modal-action modal-close white-text orange darken-2">CLOSE</button>
+                  </div>
+                </div>
+        </div>
+        
+    </div> <!-- end bodyContainer --> 
+
+    <div class="row blue footerBorder">
+        <div class="col s5"><div class="card-panel blue"></div></div>
+        <div class="col s2 footerText white-text col-s2 center"><div class="card-panel blue">&copy &nbsp Copyright 2020 </div></div>
+        <div class="col s5 footerText white-text col-s-5"><div class="card-panel blue">A site built by Christina Tarango, Ticia Rodella and Jennifer Kruk</div></div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+
+    <!-- javascript file -->
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     
+    <script>
+
+        $(document).ready(function(){
+
+            // Init Carousel
+            $('.carousel').carousel();
+
+            // Init sideBar
+            $(".button-collapse").sideNav();
+
+            // Init Modal
+            $('.modal').modal();
+
+        });
+
+    </script>
+
 </body>
 </html>
