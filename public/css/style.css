@@ -5,9 +5,37 @@
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif; */
 
+/* SITE COLORS */
+/*  #2296F3 Main Blue - just 'blue' in materialize
+
+/* COMPLIMENTARY W/ BLUE
+/*  #F37F22 Orange -- closest to materialize orange darken-2
+
+/* MONOCHROMATIC W/ BLUE
+    #0c7cd6 Darker Blue -- closest to materialize light-blue darken-2
+
+/* ANALOGOUG WITH BLUE
+    #222EF3 Primary Blue -- no good materialize match
+    #22F3E7 Cyan -- closest to materialize teal accent-2
+
+/* TRIADIC W/ BLUE
+    #F32296 Bright Pink -- no good materialize match
+    #96F322 Lime Green  -- closest to materialize light-green accent-3
+
+/* TETRADIC W/ BLUE
+    #E722F3 Pink w/ purple undertones -- no good materialize match
+    #F37F22 Orange -- closest to materialize orange darken-2
+    #2EF322 darker lime green -- no good materialize match
+
+    */
+
+/*  *************** GLOBAL ************** */
+
 * {
     font-family: 'Raleway', sans-serif;
 }
+
+/* ************************** HEADER **************************** */
 
 nav {
     box-shadow: none;
@@ -17,7 +45,6 @@ nav {
     margin-top: 1vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    /* background-color: pink; */
 }
 
 .tuesday {
@@ -39,6 +66,42 @@ img {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+/* ************************** END HEADER **************************** */
+
+.bodyContainer {
+
+        margin-top: 5vh;
+        height: 75vh;
+
+}
+
+/* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
+#signIn {
+    margin-left: 1vw;
+    margin-right: 0.25vw;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* ************************** FOOTER **************************** */
+
+.footerBorder {
+    height: 50px;
+    margin-bottom: 0;
+}
+
+.card-panel {
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+/* ************************** MEDIA QUERIES **************************** */
 
 @media (min-width: 300px) and (max-width: 992px) {
     img {
