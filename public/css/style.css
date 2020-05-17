@@ -37,8 +37,34 @@ font-family: 'Raleway', sans-serif; */
 
 /* ************************** HEADER **************************** */
 
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+}
+
 nav {
     box-shadow: none;
+    height: relative;
+}
+
+ul {
+    height: 7vh;
+    padding-top: 1vh;
+    padding-bottom: 0;
+}
+
+.material-icons {
+    visibility: hidden;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    text-decoration: underline;
 }
 
 .header {
@@ -47,10 +73,11 @@ nav {
     padding-bottom: 2vh;
 }
 
-.tuesday {
+.title {
     font-family: 'Abril Fatface', cursive;
     display: inline;
     font-size: 4rem;
+    margin-top: -2vh;
 }
 
 .blueBorder {
@@ -59,39 +86,86 @@ nav {
 }
 
 img {
-    margin-top: -1.75rem;
+    margin-top: -2rem;
 }
 
 .tagline {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: 1rem; 
+    font-size: 1.1rem;
 }
 
 /* ************************** END HEADER **************************** */
 
 .bodyContainer {
-
         margin-top: 5vh;
-        height: 75vh;
+        height: 60vh;
+}
 
+.modalRow {
+    margin-top: -2%;
+    padding-bottom: 2vh;
 }
 
 /* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
-#signIn {
+
+#logIn {
     margin-left: 1vw;
-    margin-right: 0.25vw;
+    margin-right: 1.2vw;
 }
 
 h4 {
     font-family: 'Raleway', sans-serif;
 }
 
+/* **************************** SLIDES ************************************ */
+
+.spacer {
+    height: 4vh;
+}
+
+#slideshow {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+.slide {
+    width: 60%px;
+    height: 50%px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* **************************** REVIEWS ************************************ */
+
+.reviews {
+    display: flex;
+    justify-content: center;
+}
+
+.review1 {
+    padding-top: 4vh;
+}
+
+.review2 {
+    padding-top: 1vh;
+}
+
+.review3 {
+    padding-top: 1vh;
+}
+
+.italic {
+    font-style: italic;
+}
 
 /* ************************** FOOTER **************************** */
 
-.footerBorder {
-    height: 50px;
-    margin-bottom: 0;
+.footer {
+    height: relative;
+    margin-top: 2vh;
 }
 
 .card-panel {
@@ -99,17 +173,31 @@ h4 {
     padding: 0;
 }
 
-
-
 /* ************************** MEDIA QUERIES **************************** */
 
 @media (min-width: 300px) and (max-width: 992px) {
     img {
         padding-left: 6vw;
-        padding-top: .25vh;
+    }
+
+    .tuesday {
+        padding-left: 8%;
     }
 
   }
+
+  @media (min-width: 0px) and (max-width: 1029px) {
+
+   .navMenu {
+        visibility: hidden;
+   }
+
+   .material-icons {
+    visibility: visible;
+}
+  }
+
+  
 
   @media (min-width: 300px) and (max-width: 600px) {
 
