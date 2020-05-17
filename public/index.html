@@ -3,145 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQUERY  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
     <!-- FAVICON -->
-    <link rel="icon" href="./images/favicon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
     <title>tuesday.com</title>
 </head>
 <body>
+
+
+    <!-- HEADER  -->
     <nav class="white">
         <div class="row header">
-            <div class="container main">
-              <p href="" class="tuesday center blue-text"> tuesday.com</p>
-              <a href="#" data-activates="dropdown1" class="right dropdown-button blue-text"><i class="material-icons right hide-on-med-and-up">menu</i></a>
-              <ul class="right dropdown-content" id="dropdown1">
-                <li><a class="blue-text" href="#">Home</a></li>
-                <li><a class="blue-text" href="#">About</a></li>
-                <li><a class="blue-text" href="#">Services</a></li>
+          <div class="container main">
+            <!-- HEADING TITLE/LOGO  -->
+            <p href="" class="title blue-text"> tuesday.com</p>
+            <!-- BURGER MENU  -->
+              <a href="#" data-activates="dropdown1" class="row dropdown-button blue-text">
+                <i class="material-icons">menu</i>
+              </a>
+            <ul class="right dropdown-content" id="dropdown1">
+              <li><a class="orange-text" href="index.html">Home</a></li>
+              <li><a class="blue-text" href="managers.html">Project Managers</a></li>
+              <li><a class="blue-text" href="team.html">Team Members</a></li>
+            </ul>
+            <!-- MAIN NAVBAR MENU  -->
+              <ul class= "navMenu flow-text">
+                <li><a class="orange-text" href="index.html">Home</a></li>
+                <li><a class="blue-text" href="managers.html">Project Managers</a></li>
+                <li><a class="blue-text" href="team.html">Team Members</a></li>
               </ul>
-              <ul class = "right hide-on-small-only navMenu">
-                <li><a class="blue-text" href="#">Home</a></li>
-                <li><a class="blue-text" href="#">About</a></li>
-                <li><a class="blue-text" href="#">Contact</a></li>
-              </ul>
-            </div> <!-- end internal container -->
+          </div> <!-- end internal container -->
         </div> 
     </nav>
-<br>
-    <!-- CLEAR -->
+
     <div class="clearfix"></div>
 
+    <!-- TOP BLUE BORDER   -->
     <div class="row blue blueBorder">
-        <div class="container">
-            <img id="logo" class="left" src="./images/logo.png" alt="logo">
-            <h6 class="white-text tagline">...because three day weekends</h6>
-        </div>
+      <div class="container">
+        <img id="logo" class="left" src="./images/logo.png" alt="logo">
+        <p class="white-text tagline">...because three day weekends</p>
+      </div>
     </div>
 
-    <div class="container bodyContainer">
+    <!-- BODY  -->
+    <div class="container bodyContainer">  
 
     <!-- MODAL BUTTONS -->
     <div class="row modalRow">
-    <a href="#modal1" id="signIn" class="btn waves-effect right light-blue darken-2">Sign-In</a>
-    <a href="#modal2"  id="signUp" class="btn waves-effect right orange darken-2">Sign Up!</a>
+    <a href="#modal1" id="logIn" class="btn waves-effect right light-blue darken-2">Log-In</a>
+    <a href="#modal2"  id="signUp" class="btn waves-effect right orange darken-2">Sign-Up!</a>
     </div>
 
     <!-- MODAL CONTENT -->
+    <!-- LOG-IN  -->
     <div id="modal1" class="modal">
-            <div class="modal-content center">
-                <h4 class = "light-blue-text darken-2">Sign In!</h4>
-                <form>
-                  <div class="input-field ">
-                    <input type="email" id="email" class="validate">
-                    <label class="active" for="email">Email</label>
-                  </div>
-                  <div class="row">
-                      <div class="input-field">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                      </div>
-                    </div>
-                </form>
+      <div class="modal-content center">
+        <h4 class = "light-blue-text darken-2">Log-In</h4>
+        <form>
+          <div class="input-field ">
+            <input type="email" id="logInEmail" class="validate">
+            <label class="active" for="email">Email</label>
+          </div>
+          <div class="row">
+              <div class="input-field">
+                <input id="logInPsswd" type="password" class="validate">
+                <label for="password">Password</label>
               </div>
-        <div class="modal-footer">
-          <button href="" class="btn modal-action modal-close white-text light-blue darken-2">CLOSE</button>
-        </div>
+            </div>
+        </form>
       </div>
-
-      <div id="modal2" class="modal">
-            <div class="modal-content center">
-                <h4 class ="orange-text darken-2">Fill in the form to sign up!</h4>
-                <form>
-                    <div class="input-field">
-                      <input type="text" id="firstName">
-                      <label class="active" for="firstName">First Name</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" id="LastName">
-                        <label class="active" for="LastName">Last Name</label>
-                    </div>
-                    <div class="input-field ">
-                      <input type="email" id="email" class="validate">
-                      <label class="active" for="email">Email</label>
-                    </div>
-                    <div class="row">
-                        <div class="input-field">
-                          <input id="password" type="password" class="validate">
-                          <label for="password">Password</label>
-                        </div>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button href="" class="btn modal-action modal-close white-text orange darken-2">CLOSE</button>
-                  </div>
-                </div>
-        </div>
-        
-    </div> <!-- end bodyContainer --> 
-
-    <div class="row blue footerBorder">
-        <div class="col s5"><div class="card-panel blue"></div></div>
-        <div class="col s2 footerText white-text col-s2 center"><div class="card-panel blue">&copy &nbsp Copyright 2020 </div></div>
-        <div class="col s5 footerText white-text col-s-5"><div class="card-panel blue">A site built by Christina Tarango, Ticia Rodella and Jennifer Kruk</div></div>
+      <div class="modal-footer">
+        <button href="" class="btn modal-action modal-close white-text light-blue darken-2">CLOSE</button>
+      </div>
     </div>
 
+    <!-- SIGN-UP  -->
+    <div id="modal2" class="modal">
+      <div class="modal-content center">
+        <h4 class ="orange-text darken-2">Fill in the form to sign up!</h4>
+        <form>
+          <div class="input-field">
+            <input type="text" id="firstName">
+            <label class="active" for="firstName">First Name</label>
+          </div>
+          <div class="input-field">
+              <input type="text" id="LastName">
+              <label class="active" for="LastName">Last Name</label>
+          </div>
+          <div class="input-field ">
+            <input type="email" id="signUpEmail" class="validate">
+            <label class="active" for="email">Email</label>
+          </div>
+          <div class="row">
+              <div class="input-field">
+                <input id="signUpPsswd" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+          </div>
+        </form>
+        <div class="modal-footer">
+            <button href="" class="btn modal-action modal-close white-text orange darken-2">CLOSE</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+  <!-- MAIN PAGE SLIDESHOW  -->
+
+      <div class="slideshow">
+        <div id="slideshow">
+          <div class="slide">
+            <img class="slidePics responsive-img" src="https://p2.piqsels.com/preview/618/540/908/document-paper-business-people.jpg" alt ="">
+          </div>
+          <div class="slide">
+            <img class="slidePics responsive-img" src="https://p0.piqsels.com/preview/143/185/157/data-chart-graph-pen.jpg" alt ="">
+          </div>
+          <div class="slide">
+            <img class="slidePics responsive-img" src="https://p2.piqsels.com/preview/674/707/685/charts-computer-data-document.jpg" alt ="">
+          </div>
+          <div class="slide">
+            <img class="slidePics responsive-img" src="https://p0.piqsels.com/preview/76/1021/76/hand-commercial-search-web-page.jpg" alt ="">
+          </div>
+          <div class="slide">
+            <img class="slidePics responsive-img" src="https://p0.piqsels.com/preview/795/474/365/women-business-meetings-startup.jpg" alt ="">
+          </div>
+        </div>
+      </div> <!-- end slideshow -->
+<br>
+    </div> <!-- end bodyContainer --> 
+
+
+    
+  <!-- MAIN PAGE USER REVIEWS -->
+  <div class="reviews valign-wrapper">
+    <div class="col s12 grey-text darken-3 italic review1">"This is the best site to come along in ten years..." &nbsp -The New York Times (allegedly)</div>
+  </div>
+  <div class="reviews valign-wrapper">
+    <div class="col s12 grey-text darken-3 italic review2">"It's the best site I've ever seen!" &nbsp -My Mom</div>
+  </div>
+  <div class="reviews valign-wrapper">
+    <div class="col s12 grey-text darken-3 italic review3">"It's the second best site I've ever seen!" &nbsp -Your Mom</div>
+  </div>
+
+    <!-- FOOTER  -->
+    <div class="row blue footer">
+      <div class="container">
+          <div class="col s6 footerText white-text col-s2"><div class="card-panel blue left">&copy Copyright 2020</div></div>
+          <div class="col s6 footerText white-text col-s-5"><div class="card-panel blue right">Built by Christina Tarango, Ticia Rodela and Jennifer Kruk</div></div>
+      </div>
+    </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
-
     <!-- SDKs for Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
-
-    <!-- javascript file -->
-    <script type="text/javascript" src="./js/main.js"></script>
-
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Materialize JavaScript  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    
-    <script>
-
-        $(document).ready(function(){
-
-            // Init Carousel
-            $('.carousel').carousel();
-
-            // Init sideBar
-            $(".button-collapse").sideNav();
-
-            // Init Modal
-            $('.modal').modal();
-
-        });
-
-    </script>
+    <!-- javaScript file -->
+    <script type="text/javascript" src="./js/main.js"></script>
 
 </body>
 </html>
