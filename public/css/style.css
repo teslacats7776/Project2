@@ -75,7 +75,6 @@ nav ul a:active {
 
 .title {
     font-family: 'Abril Fatface', cursive;
-    display: inline;
     font-size: 4rem;
     margin-top: -2vh;
 }
@@ -120,22 +119,44 @@ h4 {
 
 /* **************************** SLIDES ************************************ */
 
-.spacer {
-    height: 4vh;
-}
 
 #slideshow {
-    width: 60%;
-    height: 50%;
+    padding-top: 6vh;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
+    margin-bottom: 2vh;
     position: relative;
 }
 .slide {
-    width: 60%px;
-    height: 50%px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
     position: absolute;
-    left: 0;
-    top: 0;
+}
+
+.caption1 {
+    color: #FF4445;
+}
+
+.caption2 {
+color: #01FFFF;
+}
+
+.caption3 {
+    color: #0022FF;
+}
+
+.caption4 {
+    color: #FF1CFF;
+}
+
+.caption5 {
+    color: #FF2E2E;
+}
+
+.caption6 {
+    color: #F37F22;
 }
 
 /* **************************** REVIEWS ************************************ */
@@ -194,7 +215,14 @@ h4 {
 
    .material-icons {
     visibility: visible;
-}
+    }
+
+    .pics {
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
   }
 
   
