@@ -26,16 +26,15 @@ font-family: 'Raleway', sans-serif; */
     #E722F3 Pink w/ purple undertones -- no good materialize match
     #F37F22 Orange -- closest to materialize orange darken-2
     #2EF322 darker lime green -- no good materialize match
+ */
 
-    */
-
-/*  *************** GLOBAL ************** */
+/*  ************** GLOBAL >>> ALL THREE HTML PAGES ************** */
 
 * {
     font-family: 'Raleway', sans-serif;
 }
 
-/* ************************** HEADER **************************** */
+/* *************** HEADER >>> ALL THREE HTML PAGES *************** */
 
 .burger {
     width: 37vw;
@@ -69,7 +68,7 @@ nav ul a:active {
 
 #dropdown li a:hover {
     text-decoration: none !important;
-    color: #0c7cd6 !important;
+    color:#0c7cd6 !important;
 }
 
 .title {
@@ -99,12 +98,12 @@ img {
         height: 60vh;
 }
 
+/* ****************** MODALS >>> INDEX PAGE ONLY ********************* */
+
 .modalRow {
     margin-top: -2%;
     padding-bottom: 2vh;
 }
-
-/* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
 
 .modal {
     position: absolute;
@@ -121,30 +120,30 @@ h4 {
     font-family: 'Raleway', sans-serif;
 }
 
-/* **************************** SLIDES ************************************ */
+/* ********************* SLIDES  >>> INDEX PAGE ONLY ****************** */
 
 #slideshow {
-    padding-top: 6vh;
+    padding-top: 3vh;
     width: 400px;
     height: 400px;
     margin: 0 auto;
-    margin-bottom: 2vh;
     position: relative;
     z-index: 2;
 }
 .slide {
     width: 400px;
-    height: 400px;
+    height: 300px;
     margin: 0 auto;
     position: absolute;
     z-index: 3;
 }
 
-/* **************************** REVIEWS ************************************ */
+/* ******************** REVIEWS  >>> INDEX PAGE ONLY ******************** */
 
 .reviews {
     display: flex;
     justify-content: center;
+    padding: 0 3vw 0 3vw;
 }
 
 .review1 {
@@ -163,59 +162,15 @@ h4 {
     font-style: italic;
 }
 
-/* ************************** FOOTER **************************** */
+/* ****************** FOOTER >>> ALL THREE HTML PAGES ******************* */
 
 .footer {
     height: relative;
     margin-top: 2vh;
+    font-size: .75rem;
 }
 
 .card-panel {
     box-shadow: none;
     padding: 0;
 }
-
-/* ************************** MEDIA QUERIES **************************** */
-
-@media (min-width: 300px) and (max-width: 992px) {
-    img {
-        padding-left: 6vw;
-    }
-
-    .tuesday {
-        padding-left: 8%;
-    }
-
-  }
-
-  @media (min-width: 1030px) {
-
-    .burger {
-        display: none;
-    }
-  
-  }
-
-  @media (min-width: 0px) and (max-width: 1029px) {
-
-   .navMenu {
-        display: none;
-   }
-
-    .pics {
-        height: 80%;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-  }
-
-  @media (min-width: 300px) and (max-width: 600px) {
-
-    .tagline {
-        margin-top: -.4rem;
-        padding-left: 5vw;
-    }
-  }
-
-
