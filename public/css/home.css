@@ -1,0 +1,221 @@
+/* header space  */
+
+/* SITE FONTS  */
+/* font-family: 'Abril Fatface', cursive; FOR TITLE ONLY
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
+/* SITE COLORS */
+/*  #2296F3 Main Blue - just 'blue' in materialize
+
+/* COMPLIMENTARY W/ BLUE
+/*  #F37F22 Orange -- closest to materialize orange darken-2
+
+/* MONOCHROMATIC W/ BLUE
+    #0c7cd6 Darker Blue -- closest to materialize light-blue darken-2
+
+/* ANALOGOUG WITH BLUE
+    #222EF3 Primary Blue -- no good materialize match
+    #22F3E7 Cyan -- closest to materialize teal accent-2
+
+/* TRIADIC W/ BLUE
+    #F32296 Bright Pink -- no good materialize match
+    #96F322 Lime Green  -- closest to materialize light-green accent-3
+
+/* TETRADIC W/ BLUE
+    #E722F3 Pink w/ purple undertones -- no good materialize match
+    #F37F22 Orange -- closest to materialize orange darken-2
+    #2EF322 darker lime green -- no good materialize match
+
+    */
+
+/*  *************** GLOBAL ************** */
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ************************** HEADER **************************** */
+
+.burger {
+    width: 37vw;
+}
+
+nav {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    height: relative;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    text-decoration: underline;
+}
+
+.navMenu {
+    text-align: right;
+    margin-top: 2vh;
+ }
+
+.navMenu li a {
+    display: inline-block;
+}
+
+#dropdown li a:hover {
+    text-decoration: none !important;
+    color: #0c7cd6 !important;
+}
+
+.title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+}
+
+img {
+    margin-top: -2rem;
+}
+
+.tagline {
+    padding-top: .5rem;
+    padding-bottom: 1rem; 
+    font-size: 1.1rem;
+}
+
+.blueBorder {
+    height: 4vh;
+    box-shadow: 0px 1px 4px 1px #888888;
+}
+
+/* ************************** END HEADER **************************** */
+
+.bodyContainer {
+        margin-top: 5vh;
+        height: 60vh;
+}
+
+.modalRow {
+    margin-top: -2%;
+    padding-bottom: 2vh;
+}
+
+/* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
+
+.modal {
+    position: absolute;
+    z-index: 1;
+}
+
+#logIn {
+    margin-left: 1vw;
+    margin-right: 1.2vw;
+    background-color: #0c7cd6;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* **************************** SLIDES ************************************ */
+
+#slideshow {
+    padding-top: 6vh;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    position: relative;
+    z-index: 2;
+}
+.slide {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 3;
+}
+
+/* **************************** REVIEWS ************************************ */
+
+.reviews {
+    display: flex;
+    justify-content: center;
+}
+
+.review1 {
+    padding-top: 4vh;
+}
+
+.review2 {
+    padding-top: 1vh;
+}
+
+.review3 {
+    padding-top: 1vh;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* ************************** FOOTER **************************** */
+
+.footer {
+    height: relative;
+    margin-top: 2vh;
+}
+
+.card-panel {
+    box-shadow: none;
+    padding: 0;
+}
+
+/* ************************** MEDIA QUERIES **************************** */
+
+@media (min-width: 300px) and (max-width: 992px) {
+    img {
+        padding-left: 6vw;
+    }
+
+    .tuesday {
+        padding-left: 8%;
+    }
+
+  }
+
+  @media (min-width: 1030px) {
+
+    .burger {
+        display: none;
+    }
+  
+  }
+
+  @media (min-width: 0px) and (max-width: 1029px) {
+
+   .navMenu {
+        display: none;
+   }
+
+    .pics {
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+  }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+
+    .tagline {
+        margin-top: -.4rem;
+        padding-left: 5vw;
+    }
+  }
+
+

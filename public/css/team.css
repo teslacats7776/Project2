@@ -1,7 +1,7 @@
 /* header space  */
 
 /* SITE FONTS  */
-/* font-family: 'Abril Fatface', cursive;
+/* font-family: 'Abril Fatface', cursive; FOR TITLE ONLY
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif; */
 
@@ -37,25 +37,16 @@ font-family: 'Raleway', sans-serif; */
 
 /* ************************** HEADER **************************** */
 
-.main {
-    display: flex;
-    justify-content: space-between;
-    height: 7vh;
+.burger {
+    width: 37vw;
 }
 
 nav {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
     box-shadow: none;
     height: relative;
-}
-
-ul {
-    height: 7vh;
-    padding-top: 1vh;
-    padding-bottom: 0;
-}
-
-.material-icons {
-    visibility: hidden;
 }
 
 nav ul a:hover {
@@ -67,21 +58,23 @@ nav ul a:active {
     text-decoration: underline;
 }
 
-.header {
-    margin-top: 1vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+.navMenu {
+    text-align: right;
+    margin-top: 2vh;
+ }
+
+.navMenu li a {
+    display: inline-block;
+}
+
+#dropdown li a:hover {
+    text-decoration: none !important;
+    color: #0c7cd6 !important;
 }
 
 .title {
     font-family: 'Abril Fatface', cursive;
     font-size: 4rem;
-    margin-top: -2vh;
-}
-
-.blueBorder {
-    height: 4vh;
-    box-shadow: 0px 1px 4px 1px #888888;
 }
 
 img {
@@ -94,93 +87,29 @@ img {
     font-size: 1.1rem;
 }
 
+.blueBorder {
+    height: 4vh;
+    box-shadow: 0px 1px 4px 1px #888888;
+}
+
+
 /* ************************** END HEADER **************************** */
 
+
+/* ************************** BODY **************************** */
+
 .bodyContainer {
-        margin-top: 5vh;
-        height: 60vh;
+    height: 75vh;
 }
 
-.modalRow {
-    margin-top: -2%;
-    padding-bottom: 2vh;
+h5 {
+    color: #80B10A;
+    font-family: 'Playfair Display', serif;
 }
 
-/* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
-
-#logIn {
-    margin-left: 1vw;
-    margin-right: 1.2vw;
-}
-
-h4 {
-    font-family: 'Raleway', sans-serif;
-}
-
-/* **************************** SLIDES ************************************ */
 
 
-#slideshow {
-    padding-top: 6vh;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    position: relative;
-}
-.slide {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    position: absolute;
-}
 
-.caption1 {
-    color: #FF4445;
-}
-
-.caption2 {
-color: #01FFFF;
-}
-
-.caption3 {
-    color: #0022FF;
-}
-
-.caption4 {
-    color: #FF1CFF;
-}
-
-.caption5 {
-    color: #FF2E2E;
-}
-
-.caption6 {
-    color: #F37F22;
-}
-
-/* **************************** REVIEWS ************************************ */
-
-.reviews {
-    display: flex;
-    justify-content: center;
-}
-
-.review1 {
-    padding-top: 4vh;
-}
-
-.review2 {
-    padding-top: 1vh;
-}
-
-.review3 {
-    padding-top: 1vh;
-}
-
-.italic {
-    font-style: italic;
-}
 
 /* ************************** FOOTER **************************** */
 
@@ -207,15 +136,19 @@ color: #01FFFF;
 
   }
 
+  @media (min-width: 1030px) {
+
+    .burger {
+        display: none;
+    }
+  
+  }
+
   @media (min-width: 0px) and (max-width: 1029px) {
 
    .navMenu {
-        visibility: hidden;
+        display: none;
    }
-
-   .material-icons {
-    visibility: visible;
-    }
 
     .pics {
         height: 80%;
@@ -224,8 +157,6 @@ color: #01FFFF;
     }
 
   }
-
-  
 
   @media (min-width: 300px) and (max-width: 600px) {
 

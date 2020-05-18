@@ -10,7 +10,7 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
     <!-- FAVICON -->
@@ -21,29 +21,33 @@
 
 
     <!-- HEADER  -->
+  <div class="container">
     <nav class="white">
-        <div class="row header">
-          <div class="container main">
-            <!-- HEADING TITLE/LOGO  -->
-            <p href="" class="title blue-text"> tuesday.com</p>
-            <!-- BURGER MENU  -->
-              <a href="#" data-activates="dropdown1" class="row dropdown-button blue-text">
-                <i class="material-icons">menu</i>
-              </a>
-            <ul class="right dropdown-content" id="dropdown1">
-              <li><a class="orange-text" href="index.html">Home</a></li>
-              <li><a class="blue-text" href="managers.html">Project Managers</a></li>
+      <!-- HEADING TITLE/LOGO  -->
+      <div class="col s6 title left blue-text">tuesday.com</div>
+      <!-- BURGER MENU  -->
+      <div class="row right-align burger">
+        <a href="#" data-activates="dropdown" class="row dropdown-button blue-text">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right-align dropdown-content" id="dropdown">
+          <li><a class="grey-text" href="index.html">Home</a></li>
+          <li><a class="blue-text" href="manager.html">Project Managers</a></li>
+          <li><a class="blue-text" href="team.html">Team Members</a></li>
+        </ul>
+      </div>
+      <!-- MAIN NAVBAR MENU  -->
+        <div class="col s6 blue-text navMenu">
+          <div>
+            <ul>
+              <li><a class="pink-text" href="index.html">Home</a></li>
+              <li><a class="blue-text" href="manager.html">Project Managers</a></li>
               <li><a class="blue-text" href="team.html">Team Members</a></li>
             </ul>
-            <!-- MAIN NAVBAR MENU  -->
-              <ul class= "navMenu flow-text">
-                <li><a class="orange-text" href="index.html">Home</a></li>
-                <li><a class="blue-text" href="managers.html">Project Managers</a></li>
-                <li><a class="blue-text" href="team.html">Team Members</a></li>
-              </ul>
-          </div> <!-- end internal container -->
-        </div> 
+          </div>
+      </div> 
     </nav>
+  </div>
 
     <div class="clearfix"></div>
 
@@ -60,7 +64,7 @@
 
     <!-- MODAL BUTTONS -->
     <div class="row modalRow">
-    <a href="#modal1" id="logIn" class="btn waves-effect right light-blue darken-2">Log-In</a>
+    <a href="#modal1" id="logIn" class="btn waves-effect right">Log-In</a>
     <a href="#modal2"  id="signUp" class="btn waves-effect right orange darken-2">Sign-Up!</a>
     </div>
 
