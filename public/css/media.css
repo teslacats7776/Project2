@@ -1,0 +1,125 @@
+
+
+/* ********************* MEDIA QUERIES **************************** */
+
+/* ******************** MIN WIDTH 300 PX ************************** */
+/* ******************** MAX WIDTH 992 PX ************************** */
+
+@media (min-width: 300px) and (max-width: 992px) {
+    img {
+        padding-left: 6vw;
+    }
+
+    .tuesday {
+        padding-left: 8%;
+    }
+
+    .tagline {
+        margin-top: -.4rem;
+        padding-left: 5vw;
+    }
+
+    .title {
+        margin-top: -3vh;
+    }
+
+    .burger {
+        margin-top: -3vh;
+    }
+
+    #slideshow,
+    .slide {
+        width: 300px;
+    }
+
+    .bodyContainer {
+        height: 50vh;
+    }
+  }
+
+/* ******************** MIN WIDTH 993 PX ************************** */
+/* ******************** MAX WIDTH 1440 PX ************************** */
+
+  @media (min-width: 993px) and (max-width: 1440px) {
+
+    .pics {
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #slideshow {
+        padding-top: 1vh;
+        height: 350px;
+    }
+
+    .slide {
+        height: 350px;
+    }
+
+    .review1 {
+        padding-top: 1vh;
+    }
+
+    .footer {
+        height: relative;
+        margin-top: 1vh;
+        font-size: .75rem;
+    }
+  }
+
+  /* ******************** MAX HEIGHT 568 PX ************************** */
+  /* ***************************************************************** */
+  
+  @media (max-height: 568px) {
+  #slideshow {
+      display: none;
+  }
+
+  .title {
+      margin-left: 4vw;
+      font-size: 3rem;
+  }
+
+  .tagline {
+      font-size: 0.75rem;
+  }
+
+  .modalRow {
+    margin-top: 10vh;
+}
+
+.blueBorder {
+    margin-top: 2vh;
+    height: 7vh;
+}
+
+.bodyContainer {
+    height: 25vh;
+    padding: 0 3vw 0 3vw;
+}
+
+.reviews {
+    padding: 0 3vw 0 3vw;
+}
+
+}
+
+  /* ******************** MENUS ONLY ************************** */
+  /* ********************************************************** */
+
+  @media (min-width: 1030px) {
+
+    .burger {
+        display: none;
+    }
+  
+  }
+
+  @media (min-width: 0px) and (max-width: 1031px) {
+
+    .navMenu {
+        display: none;
+    }
+  
+  }
