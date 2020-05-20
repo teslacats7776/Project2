@@ -1,7 +1,7 @@
 /* header space  */
 
 /* SITE FONTS  */
-/* font-family: 'Abril Fatface', cursive;
+/* font-family: 'Abril Fatface', cursive; FOR TITLE ONLY
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif; */
 
@@ -37,20 +37,54 @@ font-family: 'Raleway', sans-serif; */
 
 /* ************************** HEADER **************************** */
 
+.burger {
+    width: 37vw;
+}
+
 nav {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
     box-shadow: none;
+    height: relative;
 }
 
-.header {
-    margin-top: 1vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
 }
 
-.tuesday {
+nav ul a:active {
+    text-decoration: underline;
+}
+
+.navMenu {
+    text-align: right;
+    margin-top: 2vh;
+ }
+
+.navMenu li a {
+    display: inline-block;
+}
+
+#dropdown li a:hover {
+    text-decoration: none !important;
+    color: #0c7cd6 !important;
+}
+
+.title {
     font-family: 'Abril Fatface', cursive;
-    display: inline;
     font-size: 4rem;
+}
+
+img {
+    margin-top: -2rem;
+}
+
+.tagline {
+    padding-top: .5rem;
+    padding-bottom: 1rem; 
+    font-size: 1.1rem;
 }
 
 .blueBorder {
@@ -58,65 +92,30 @@ nav {
     box-shadow: 0px 1px 4px 1px #888888;
 }
 
-img {
-    margin-top: -1.75rem;
-}
-
-.tagline {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
 
 /* ************************** END HEADER **************************** */
 
+
+/* ************************** BODY **************************** */
+
 .bodyContainer {
-
-        margin-top: 5vh;
-        height: 75vh;
-
+    height: 75vh;
 }
 
-/* ************************** SIGN-IN AND SIGN-UP MODALS **************************** */
-#signIn {
-    margin-left: 1vw;
-    margin-right: 0.25vw;
-}
-
-h4 {
-    font-family: 'Raleway', sans-serif;
+h5 {
+    color: #80B10A;
+    font-family: 'Playfair Display', serif;
 }
 
 
 /* ************************** FOOTER **************************** */
 
-.footerBorder {
-    height: 50px;
-    margin-bottom: 0;
+.footer {
+    height: relative;
+    margin-top: 2vh;
 }
 
 .card-panel {
     box-shadow: none;
     padding: 0;
 }
-
-
-
-/* ************************** MEDIA QUERIES **************************** */
-
-@media (min-width: 300px) and (max-width: 992px) {
-    img {
-        padding-left: 6vw;
-        padding-top: .25vh;
-    }
-
-  }
-
-  @media (min-width: 300px) and (max-width: 600px) {
-
-    .tagline {
-        margin-top: -.4rem;
-        padding-left: 5vw;
-    }
-  }
-
-

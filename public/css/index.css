@@ -1,0 +1,176 @@
+/* header space  */
+
+/* SITE FONTS  */
+/* font-family: 'Abril Fatface', cursive; FOR TITLE ONLY
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
+/* SITE COLORS */
+/*  #2296F3 Main Blue - just 'blue' in materialize
+
+/* COMPLIMENTARY W/ BLUE
+/*  #F37F22 Orange -- closest to materialize orange darken-2
+
+/* MONOCHROMATIC W/ BLUE
+    #0c7cd6 Darker Blue -- closest to materialize light-blue darken-2
+
+/* ANALOGOUG WITH BLUE
+    #222EF3 Primary Blue -- no good materialize match
+    #22F3E7 Cyan -- closest to materialize teal accent-2
+
+/* TRIADIC W/ BLUE
+    #F32296 Bright Pink -- no good materialize match
+    #96F322 Lime Green  -- closest to materialize light-green accent-3
+
+/* TETRADIC W/ BLUE
+    #E722F3 Pink w/ purple undertones -- no good materialize match
+    #F37F22 Orange -- closest to materialize orange darken-2
+    #2EF322 darker lime green -- no good materialize match
+ */
+
+/*  ************** GLOBAL >>> ALL THREE HTML PAGES ************** */
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* *************** HEADER >>> ALL THREE HTML PAGES *************** */
+
+.burger {
+    width: 37vw;
+}
+
+nav {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    height: relative;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    text-decoration: underline;
+}
+
+.navMenu {
+    text-align: right;
+    margin-top: 2vh;
+ }
+
+.navMenu li a {
+    display: inline-block;
+}
+
+#dropdown li a:hover {
+    text-decoration: none !important;
+    color:#0c7cd6 !important;
+}
+
+.title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+}
+
+img {
+    margin-top: -2rem;
+}
+
+.tagline {
+    padding-top: .5rem;
+    padding-bottom: 1rem; 
+    font-size: 1.1rem;
+}
+
+.blueBorder {
+    height: 4vh;
+    box-shadow: 0px 1px 4px 1px #888888;
+}
+
+/* ************************** END HEADER **************************** */
+
+.bodyContainer {
+        margin-top: 5vh;
+        height: 60vh;
+}
+
+/* ****************** MODALS >>> INDEX PAGE ONLY ********************* */
+
+.modalRow {
+    margin-top: -2%;
+    padding-bottom: 2vh;
+}
+
+.modal {
+    position: absolute;
+    z-index: 1;
+}
+
+#logIn {
+    margin-left: 1vw;
+    margin-right: 1.2vw;
+    background-color: #0c7cd6;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ********************* SLIDES  >>> INDEX PAGE ONLY ****************** */
+
+#slideshow {
+    padding-top: 3vh;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.slide {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 3;
+}
+
+/* ******************** REVIEWS  >>> INDEX PAGE ONLY ******************** */
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    padding: 0 3vw 0 3vw;
+}
+
+.review1 {
+    padding-top: 4vh;
+}
+
+.review2 {
+    padding-top: 1vh;
+}
+
+.review3 {
+    padding-top: 1vh;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* ****************** FOOTER >>> ALL THREE HTML PAGES ******************* */
+
+.footer {
+    height: relative;
+    margin-top: 2vh;
+    font-size: .75rem;
+}
+
+.card-panel {
+    box-shadow: none;
+    padding: 0;
+}

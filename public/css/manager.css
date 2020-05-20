@@ -1,0 +1,121 @@
+/* header space  */
+
+/* SITE FONTS  */
+/* font-family: 'Abril Fatface', cursive; FOR TITLE ONLY
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
+/* SITE COLORS */
+/*  #2296F3 Main Blue - just 'blue' in materialize
+
+/* COMPLIMENTARY W/ BLUE
+/*  #F37F22 Orange -- closest to materialize orange darken-2
+
+/* MONOCHROMATIC W/ BLUE
+    #0c7cd6 Darker Blue -- closest to materialize light-blue darken-2
+
+/* ANALOGOUG WITH BLUE
+    #222EF3 Primary Blue -- no good materialize match
+    #22F3E7 Cyan -- closest to materialize teal accent-2
+
+/* TRIADIC W/ BLUE
+    #F32296 Bright Pink -- no good materialize match
+    #96F322 Lime Green  -- closest to materialize light-green accent-3
+
+/* TETRADIC W/ BLUE
+    #E722F3 Pink w/ purple undertones -- no good materialize match
+    #F37F22 Orange -- closest to materialize orange darken-2
+    #2EF322 darker lime green -- no good materialize match
+
+    */
+
+/*  *************** GLOBAL ************** */
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ************************** HEADER **************************** */
+
+.burger {
+    width: 37vw;
+}
+
+nav {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    height: relative;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    text-decoration: underline;
+}
+
+.navMenu {
+    text-align: right;
+    margin-top: 2vh;
+ }
+
+.navMenu li a {
+    display: inline-block;
+}
+
+#dropdown li a:hover {
+    text-decoration: none !important;
+    color: #0c7cd6 !important;
+}
+
+.title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+}
+
+img {
+    margin-top: -2rem;
+}
+
+.tagline {
+    padding-top: .5rem;
+    padding-bottom: 1rem; 
+    font-size: 1.1rem;
+}
+
+.blueBorder {
+    height: 4vh;
+    box-shadow: 0px 1px 4px 1px #888888;
+}
+
+
+/* ************************** END HEADER **************************** */
+
+
+/* ************************** BODY **************************** */
+
+.bodyContainer {
+        height: 75vh;
+}
+
+h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+/* ************************** FOOTER **************************** */
+
+.footer {
+    height: relative;
+    margin-top: 2vh;
+}
+
+.card-panel {
+    box-shadow: none;
+    padding: 0;
+}
