@@ -36,15 +36,29 @@
           <li><a class="grey-text" href="index.html">Home</a></li>
           <li><a class="blue-text" href="manager.html">Project Managers</a></li>
           <li><a class="blue-text" href="team.html">Team Members</a></li>
-        </ul>
+       
       </div>
       <!-- MAIN NAVBAR MENU  -->
         <div class="col s6 blue-text navMenu">
           <div>
             <ul>
               <li><a class="pink-text" href="index.html">Home</a></li>
-              <li><a class="blue-text" href="manager.html">Project Managers</a></li>
-              <li><a class="blue-text" href="team.html">Team Members</a></li>
+              <li><a class="logged-in blue-text" href="manager.html" style="display: none;">Project Managers</a></li>
+              <li><a class="logged-in blue-text" href="team.html" style="display: none;">Team Members</a></li>
+          
+              <li class="logged-in" style="display: none;">
+                <a href="#" class="blue-text modal-trigger" data-target="modal-account">Account</a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="#" class="blue-text" id="logout">Logout</a>
+              </li>
+              <li class="logged-out" style="display: none;">
+                <a href="#" class="blue-text modal-trigger" data-target="modal-login">Login</a>
+              </li>
+              <li class="logged-out" style="display: none;">
+                <a href="#" class="blue-text modal-trigger" data-target="modal-signup">Sign up</a>
+              </li>
+            
             </ul>
           </div>
       </div> 
@@ -64,64 +78,44 @@
     <!-- BODY  -->
     <div class="container bodyContainer">  
 
-    <!-- MODAL BUTTONS -->
-    <div class="row modalRow">
-    <a href="#modal1" id="logIn" class="btn waves-effect right">Log-In</a>
-    <a href="#modal2"  id="signUp" class="btn waves-effect right orange darken-2">Sign-Up!</a>
-    </div>
 
-    <!-- MODAL CONTENT -->
-    <!-- LOG-IN  -->
-    <div id="modal1" class="modal">
-      <div class="modal-content center">
-        <h4 class = "light-blue-text darken-2">Log-In</h4>
-        <form>
-          <div class="input-field ">
-            <input type="email" id="logInEmail" class="validate">
-            <label class="active" for="email">Email</label>
-          </div>
-          <div class="row">
-              <div class="input-field">
-                <input id="logInPsswd" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button href="" class="btn modal-action modal-close white-text light-blue darken-2">CLOSE</button>
-      </div>
-    </div>
-
-    <!-- SIGN-UP  -->
-    <div id="modal2" class="modal">
-      <div class="modal-content center">
-        <h4 class ="orange-text darken-2">Fill in the form to sign up!</h4>
-        <form>
-          <div class="input-field">
-            <input type="text" id="firstName">
-            <label class="active" for="firstName">First Name</label>
-          </div>
-          <div class="input-field">
-              <input type="text" id="LastName">
-              <label class="active" for="LastName">Last Name</label>
-          </div>
-          <div class="input-field ">
-            <input type="email" id="signUpEmail" class="validate">
-            <label class="active" for="email">Email</label>
-          </div>
-          <div class="row">
-              <div class="input-field">
-                <input id="signUpPsswd" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-          </div>
-        </form>
-        <div class="modal-footer">
-            <button href="" class="btn modal-action modal-close white-text orange darken-2">CLOSE</button>
-          </div>
+      <!-- MODAL CONTENT -->
+      <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
         </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
     </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
+    
 
   <!-- MAIN PAGE SLIDESHOW  -->
       <div class="slideshow center-align">
@@ -176,16 +170,49 @@
       </div>
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
-    <!-- SDKs for Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
-    <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- Materialize JavaScript  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <!-- javaScript file -->
-    <script type="text/javascript" src="./js/main.js"></script>
+  <!--Import jQuery before materialize.js-->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- javaScript file -->
 
+
+ <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+ <!-- <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script> -->
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+       apiKey: "AIzaSyBLi5W0oZZLUiKZT-fC_VZvlHx35MfYG_w",
+       authDomain: "project2-94f2d.firebaseapp.com",
+       databaseURL: "https://project2-94f2d.firebaseio.com",
+       projectId: "project2-94f2d",
+       storageBucket: "project2-94f2d.appspot.com",
+       messagingSenderId: "1053191376770",
+       appId: "1:1053191376770:web:77fb060ad4618a1b1dc99b"
+   };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+     //  const database = firebase.database();
+    </script>  
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+   <!-- javascript file --> 
+   <script src="./js/auth.js"></script>
+  <script src="./js/index.js"></script>
+
+
+
+
+ 
 </body>
+
 </html>
