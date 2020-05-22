@@ -25,11 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var items = document.querySelectorAll('.collapsible');
   M.Collapsible.init(items);
-   // Init Carousel
-//  $('.carousel').carousel();
 
-//  // Init sideBar
-// //  $(".button-collapse").sideNav();
 (function ($) {
   "use strict";
   var slideshow = (function () {
