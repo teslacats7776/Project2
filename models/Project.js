@@ -22,12 +22,12 @@ module.exports = function (sequelize, DataTypes) {
   // associating Projects table to Tasks, Team Members and Project Managers
   Project.associate = function(models){
   // Each Project belongs to A Project Manager
-  models.Project.belongsTo(models.User, { as: "ProjectManager" }),
+  Project.belongsTo(models.User, { as: "ProjectManager" }),
   
   // models.Project.hasMany(models.ProjectMembers),
   
   // Each Project can have many Tasks
-  models.Project.hasMany(models.Task)
+  Project.hasMany(models.Task)
 }
   return Project;
 }

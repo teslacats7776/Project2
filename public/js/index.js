@@ -18,7 +18,34 @@ const setupUI = (user) => {
 
 
 // setup materialize components
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function(){
+
+  $.ajax("/api/projects" {
+    type: "PUT",
+    data: project_name
+  }).then(
+    function(response) {
+      for (var i=0; i<response.length; i++) {
+        var project = response[i];
+        // get elements i.e. project.name
+          
+        // <li>project.name
+
+        // <button> add Team Member <button>
+
+        //</li>
+
+        var newLI = $("<li>");
+        newLI.text(project.name);
+        var btn = $("<button");
+        btn.text("Add Team Member");
+        newLI.append(btn);
+        $("#test").append(newLI);
+      }
+        console.log(response);
+      }
+    );
+  
 
   var modals = document.querySelectorAll('.modal');
   M.Modal.init(modals);
@@ -58,5 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }());
   slideshow.startslideshow();
   }(jQuery));
-});
+
+
+}); //end document.ready
 
