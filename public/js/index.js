@@ -2,25 +2,55 @@
 
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
-
+const accountDetails = document.querySelector('.account-details')
+const adminItems = document.querySelectorAll('.admin');
+const managerItems = document.querySelector("#manager");
 const setupUI = (user) => {
-  if (user) {
-    // toggle user UI elements
-    loggedInLinks.forEach(item => item.style.display = 'block');
-    loggedOutLinks.forEach(item => item.style.display = 'none');
-  } else {
-    // toggle user elements
-    loggedInLinks.forEach(item => item.style.display = 'none');
-    loggedOutLinks.forEach(item => item.style.display = 'block');
-  }
+    if (user) {
+
+        if (user.admin != undefined) {
+            adminItems.forEach(item => item.style.display = 'block');
+            document.querySelector('#manager').style.display = 'block'
+        } 
+
+        db.collection('users').doc(user.uid).get().then(doc => {
+
+            // toggle user UI elements
+            const html = `<div>Logged in as ${user.email}</div>
+                          <div>${doc.data().role}</div>
+                          <div>${doc.data().bio}</div>
+               <div class="pink-text">${user.admin ? 'Admin': ''}</div>
+`
+            accountDetails.innerHTML = html;
+        })
+
+
+        loggedInLinks.forEach(item => {
+           console.log(item,"item");  
+            item.style.display = 'block'
+        
+        });
+
+        if(user.admin===undefined){
+            console.log(user.admin, "admin");
+            document.querySelector('#manager').style.display = 'none'
+        };
+
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+    } else {
+        adminItems.forEach(item => item.style.display = 'none');
+        //hide account info
+        accountDetails.innerHTML = '';
+        // toggle user elements
+        loggedInLinks.forEach(item => item.style.display = 'none');
+        loggedOutLinks.forEach(item => item.style.display = 'block');
+    }
 };
-
-
 
 // setup materialize components
 $(document).ready(function(){
 
-  $.ajax("/api/projects" {
+  $.ajax("/api/projects", {
     type: "PUT",
     data: project_name
   }).then(

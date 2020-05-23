@@ -51,12 +51,6 @@ router.get("/api/users", function(req, res) {
   });
 
 
-
-
-
-
-
-
   /* ****************************** EXAMPLES TAKEN FROM THE BURGER2 SEQUELIZE HOMEWORK  > 'TASK MANAGER'
 
 // POST route for saving a new tasks
