@@ -2,7 +2,7 @@
 
 
 module.exports = function (sequelize, DataTypes) {
-    var TeamMember = sequelize.define("TeamMember",
+    var User = sequelize.define("User",
      {
       first_name: {
         type: DataTypes.STRING,
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
           len: [2]
         }
       },
-      team: {
+      manager: {
         type: DataTypes.BOOLEAN,
         default: true,
         allowNull: false,
@@ -43,14 +43,14 @@ module.exports = function (sequelize, DataTypes) {
     );
 
       // associating Team Members to Project Managers, Projects, Tasks and Role
-      TeamMember.associate = function(models){
-        // Each Team Member belongs to one Project Manager
-        models.TeamMember.belongsTo(models.ProjectManager)
+      User.associate = function(models){
         // Each Team Member has one Project
-        models.TeamMember.hasOne(models.Project)
+        User.hasOne(models.Project)
         // Each Team Member has one Task
-        models.TeamMember.hasOne(models.Task)
+        User.hasOne(models.Task)
+        // User has many project members
+        User.hasMany(models.ProjectMember)
       }
 
-    return TeamMember;
+    return User;
   };

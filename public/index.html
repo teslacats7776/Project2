@@ -33,10 +33,10 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="right-align dropdown-content" id="dropdown">
-          <li><a class="grey-text" href="index.html">Home</a></li>
+          <li><a class="pink-text" href="#">Home</a></li>
           <li><a class="blue-text" href="manager.html">Project Managers</a></li>
           <li><a class="blue-text" href="team.html">Team Members</a></li>
-       
+        </ul>
       </div>
       <!-- MAIN NAVBAR MENU  -->
         <div class="col s6 blue-text navMenu">
@@ -44,6 +44,7 @@
             <ul>
               <li><a class="pink-text" href="index.html">Home</a></li>
               <li><a id="manager" class="logged-in blue-text" href="manager.html" style="display: none;">Project Managers</a></li>
+
               <li><a class="logged-in blue-text" href="team.html" style="display: none;">Team Members</a></li>
           
               <li class="logged-in" style="display: none;">
@@ -66,9 +67,9 @@
           </div>
       </div> 
     </nav>
-  </div>
+  </div> <!-- end header container -->
 
-    <div class="clearfix"></div>
+  <div class="clearfix"></div>
 
     <!-- TOP BLUE BORDER   -->
     <div class="row blue blueBorder">
@@ -82,8 +83,8 @@
     <div class="container bodyContainer">  
 
  
-      <!-- MODAL CONTENT -->
-      <!-- SIGN UP MODAL -->
+  <!-- MODAL CONTENT -->
+  <!-- SIGN UP MODAL -->
   <div id="modal-signup" class="modal">
     <div class="modal-content">
       <h4>Sign up</h4><br />
@@ -198,14 +199,6 @@
       </div>
     </div>
 
-  <!--Import jQuery before materialize.js-->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <!-- javaScript file -->
-
-
- <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
@@ -233,14 +226,13 @@
       const functions = firebase.functions();
      //  const database = firebase.database();
     </script>  
-    <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+  <!--Import jQuery before materialize.js-->
+  <cript src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> 
    <!-- javascript file --> 
    <script src="./js/auth.js"></script>
   <script src="./js/index.js"></script>
-
-
-
 
  
 </body>

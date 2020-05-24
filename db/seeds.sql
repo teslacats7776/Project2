@@ -1,6 +1,6 @@
 --  header space 
  
---  Mock Project Managers 
+--  Mock Users
  INSERT INTO Users (first_name, last_name, manager, email, password)
  VALUES ("John", "Smith", true, "js@gmail", "123456"),
 ("Jane", "Jones", true, "jj@gmail", "123456"),
