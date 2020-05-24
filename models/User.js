@@ -48,6 +48,8 @@ module.exports = function (sequelize, DataTypes) {
         User.hasOne(models.Project)
         // Each Team Member has one Task
         User.hasOne(models.Task)
+        // User has many project members
+        User.hasMany(models.ProjectMember)
       }
 
     return User;
