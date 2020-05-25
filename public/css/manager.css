@@ -99,14 +99,35 @@ img {
 /* ************************** BODY **************************** */
 
 .bodyContainer {
-        height: 75vh;
+    height: 70vh;
 }
 
-h5 {
+#manager {
+    color: orange;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 3vh;
 }
 
+.card-title {
+    font-size: 2rem;
+}
 
+.cardRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: relative;
+}
+
+.btn-small {
+    margin-bottom: 3vh;
+}
+
+.edit {
+    margin-bottom: 4vh;
+}
 
 /* ************************** FOOTER **************************** */
 

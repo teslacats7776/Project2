@@ -84,6 +84,7 @@ $(document).ready(function(){
   M.Collapsible.init(items);
 
 (function ($) {
+
   "use strict";
   var slideshow = (function () {
       var counter = 0,

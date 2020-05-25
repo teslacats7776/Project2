@@ -29,7 +29,7 @@
         <div class="col s6 title left blue-text">tuesday.com</div>
         <!-- BURGER MENU  -->
         <div class="row right-align burger">
-          <a href="#" data-activates="dropdown" class="row dropdown-button blue-text">
+          <a href="" data-activates="dropdown" class="row dropdown-button blue-text">
             <i class="material-icons">menu</i>
           </a>
           <ul class="right-align dropdown-content" id="dropdown">
@@ -43,8 +43,7 @@
             <div>
               <ul>
                 <li><a class="blue-text" href="index.html">Home</a></li>
-                <li><a class="blue-text" href="manager.html">Project Managers</a></li>
-                <li><a class="green-text" href="team.html">Team Members</a></li>
+                <li><a class="green-text" href="team.html">Team Member Page</a></li>
               </ul>
             </div>
         </div> 
@@ -63,10 +62,63 @@
 
     <!-- BODY  -->
     <div class="container bodyContainer">  
-        <h5 class = "right-align">Team Member Page</h5>
+      <h5 class="right-align" id="projectName">Project Name</h5>
 
+      <!-- CARDS -->
+      <div class="row cardRow col sm 12">
 
+        <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Waiting...</span>
+            <hr>
+            <ol>
+            <li>This Task</li>
+            <li>Another Task</li>
+          </ol>
+          </div>         
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
 
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Assigned</span>
+            <hr>
+            <ol>
+            <li>This Task</li>
+            <li>Another Task</li>
+          </ol>
+          </div>         
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">In Progress</span>
+            <hr>
+            <ol>
+            <li>This Task</li>
+            <li>Another Task</li>
+          </ol>
+          </div>         
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Done</span>
+            <hr>
+            <ol>
+            <li>This Task</li>
+            <li>Another Task</li>
+          </ol>
+          </div>         
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+      </div> <!-- end row -->
 
     </div> <!-- end body container --> 
 
@@ -88,8 +140,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
    <!--keep this one for authentication-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-    <!-- javaScript file -->
+    <!-- javaScript files -->
     <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/team.js"></script>
 
 </body>
 </html>

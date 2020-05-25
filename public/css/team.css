@@ -99,12 +99,31 @@ img {
 /* ************************** BODY **************************** */
 
 .bodyContainer {
-    height: 75vh;
+    height: 70vh;
+    background-color: pink;
 }
 
-h5 {
+#projectName {
     color: #80B10A;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 3vh;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.cardRow {
+    display: flex; 
+    justify-content: space-around;
+}
+
+.card {
+    height: relative;
+}
+
+.btn-small {
+    margin-bottom: 3vh;
 }
 
 
