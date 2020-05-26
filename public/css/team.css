@@ -100,7 +100,6 @@ img {
 
 .bodyContainer {
     height: 70vh;
-    background-color: pink;
 }
 
 #projectName {
@@ -109,23 +108,68 @@ img {
     margin-bottom: 3vh;
 }
 
-.card-title {
-    font-size: 2rem;
-}
-
 .cardRow {
     display: flex; 
     justify-content: space-around;
+}
+
+.row .col{
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
     height: relative;
 }
 
+.card-title {
+    font-size: 2rem;
+}
+
+ol {
+    padding: 0;
+}
+
+li {
+    cursor: move;
+}
+
+#done {
+    color: lightgray;
+}
+
+
+#add-task-form,
 .btn-small {
     margin-bottom: 3vh;
 }
 
+#add-task-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus {
+    padding-right: 0.15vw;
+ 
+}
+
+input::placeholder {
+    font-family: 'Playfair Display', serif;
+}
+
+li i{
+    float: right;
+    margin-left: 0px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+
+#del {
+    margin-top: .5vh;
+}
 
 /* ************************** FOOTER **************************** */
 

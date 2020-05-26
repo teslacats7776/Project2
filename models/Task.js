@@ -11,12 +11,15 @@ module.exports = function (sequelize, DataTypes) {
         len: [2]
       }
     },
-    task_comment: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [2]
-      }
+    status: {
+      type: DataTypes.ENUM,
+      values: [
+        'waiting',
+        'assigned',
+        'active',
+        'done'
+      ],
+      defaultValue: 'waiting'
    },
   }, 
       { timestamps: false },

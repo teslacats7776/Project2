@@ -62,8 +62,8 @@ nav ul a:active {
     display: inline-block;
 }
 
-.burger {
-    /* width: 37vw; */
+.burger{
+    box-shadow: none !important;
 }
 
 #dropdown li a:hover {

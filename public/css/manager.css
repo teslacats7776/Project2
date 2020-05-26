@@ -117,8 +117,18 @@ img {
     justify-content: space-between;
 }
 
+.row .col{
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .card {
     height: relative;
+}
+
+ol {
+    padding: 0;
 }
 
 .btn-small {
