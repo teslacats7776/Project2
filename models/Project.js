@@ -27,7 +27,9 @@ module.exports = function (sequelize, DataTypes) {
   // models.Project.hasMany(models.ProjectMembers),
   
   // Each Project can have many Tasks
-  Project.hasMany(models.Task)
+  Project.hasMany(models.Task, {
+    onDelete: "cascade"
+  })
 }
   return Project;
 }

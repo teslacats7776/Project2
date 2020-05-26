@@ -28,23 +28,24 @@
         <!-- HEADING TITLE/LOGO  -->
         <div class="col s6 title left blue-text">tuesday.com</div>
         <!-- BURGER MENU  -->
-        <div class="row right-align burger">
-          <a href="#" data-activates="dropdown" class="row dropdown-button blue-text">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="right-align dropdown-content" id="dropdown">
-            <li><a class="blue-text" href="index.html">Home</a></li>
-            <li><a class="grey-text" href="#">Project Managers</a></li>
-            <li><a class="blue-text" href="team.html">Team Members</a></li>
-          </ul>
-        </div>
+      <!-- BURGER MENU  -->
+      <!-- <div class="row right-align burger">
+        <a href="#" data-activates="dropdown" class="row dropdown-button blue-text">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right-align dropdown-content" id="dropdown">
+          <li><a class="blue-text" href="index.html">Home</a></li>
+          <li><a class="grey-text" href="manager.html">Project Managers</a></li>
+          <li><a class="blue-text" href="team.html">Team Members</a></li>
+        </ul>
+      </div> -->
         <!-- MAIN NAVBAR MENU  -->
           <div class="col s6 blue-text navMenu">
             <div>
               <ul>
                 <li><a class="blue-text" href="index.html">Home</a></li>
-                <li><a class="orange-text" href="manager.html">Project Managers</a></li>
-                <li><a class="blue-text" href="team.html">Team Members</a></li>
+                <li><a class="orange-text" href="manager.html">Project Manager Page</a></li>
+                <li><a class="blue-text" href="team.html">Team Member Page</a></li>
               </ul>
             </div>
         </div> 
@@ -63,9 +64,87 @@
 
     <!-- BODY  -->
     <div class="container bodyContainer">
-        <h5 class = "right-align orange-text">Project Manager Page</h5>
+        <h5 class = "right-align" id="manager">Project Manager's Name</h5>
 
-        <ol id="test"></ol>
+      <!-- CARDS -->
+      <div class="row cardRow col sm12">
+
+        <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title">Project One</span>
+            <hr>
+            <ol>
+            <li>John Smith</li>
+            <li>Jane Doe</li>
+          </ol>
+          </div>
+          <a href="#modal" class="btn-floating right blue btn-small" id="modal">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title">Project Two</span>
+            <hr>
+            <ol>
+            <li>Tom Cooper</li>
+            <li>Mary Mack</li>
+          </ol>
+          </div>
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title">Project Three</span>
+            <hr>
+            <ol>
+            <li>Sam Stone</li>
+            <li>Ally Lee</li>
+          </ol>
+          </div>
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title">Project Four</span>
+            <hr>
+            <ol>
+            <li>Norah Niece</li>
+            <li>Grace Perry</li>
+          </ol>
+          </div>
+          <a href="#" class="btn-floating right blue btn-small">
+            <i class="small material-icons">add</i></a>
+         </div>
+
+         <!-- NOT WORKING -->
+        <!-- MODAL STRUCTURE -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <label for="Insert Team Member"></label>
+            <input type="text" placeholder=""><input>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close">X</a>
+          </div>
+        </div>
+
+      </div> <!-- end row -->
+
+
+      <!-- FIXED ACTION BUTTON -->
+      <div class="fixed-action-btn edit">
+        <a href="#" class="btn-floating orange btn-large"><i class="large material-icons">mode_edit</i></a>
+        <ul>
+          <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">add</i></a></li>
+        </ul>
+      </div>
+
+
 
 
 
@@ -90,8 +169,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <!--keep this one for authentication-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-    <!-- javaScript file -->
+    <!-- javaScript files -->
     <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/manager.js"></script>
 
 </body>
 </html>

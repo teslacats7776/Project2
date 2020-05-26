@@ -25,13 +25,13 @@ VALUES ("Project 1"),
 
 
 -- Mock Tasks 
-INSERT INTO Tasks (task_name)
-VALUES ("Models"),
-("Set up heroku database"),
-("Convert vanilla jScript to jQuery"),
-("Set Up Routes"),
-("Set Up Server"),
-("User Interface"),
-("Design"),
-("Front End Javascript"),
-("Handlebars")
+INSERT INTO Tasks (task_name, status)
+VALUES ("Models", "waiting"),
+("Set up heroku", "assigned"),
+("Convert to jQuery", "active"),
+("Set Up Routes", "done"),
+("Set Up Server", "waiting"),
+("User Interface", "assigned"),
+("Design", "active"),
+("Front End Javascript", "done"),
+("Handlebars", "waiting")
