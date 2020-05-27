@@ -58,12 +58,6 @@ auth.onAuthStateChanged(user => {
     }
   });
   
-
-
-
-
-
-
   
   // signup
   const signupForm = document.querySelector('#signup-form');
@@ -138,9 +132,26 @@ auth.onAuthStateChanged(user => {
       const modal = document.querySelector('#modal-login');
       M.Modal.getInstance(modal).close();
       loginForm.reset();
+
+        $.get("/api/users/" + email).then(function(user){
+          console.log("You are logged in as: ", user);
+
+        })
     });
   
+<<<<<<< HEAD
 
 
   });
 
+=======
+  });
+
+// const admin = require('firebase-admin');
+
+
+// function test () {
+// admin.initializeApp();
+// admin.auth().getUserByEmail(data.email).then(user => {console.log("LOOOOOOK: ", user) })
+// }
+>>>>>>> upstream/master

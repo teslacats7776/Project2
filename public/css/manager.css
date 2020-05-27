@@ -113,7 +113,8 @@ img {
     margin-bottom: 3vh;
 }
 
-.cardRow {
+.cardRow,
+.cardRowDup {
     display: flex; 
     justify-content: space-around;
 }
