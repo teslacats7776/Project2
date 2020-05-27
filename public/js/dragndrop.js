@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
 
     // for manager page
-    $( "#available, #project1, #project2, #project3").sortable({
+    $( "#available, #project1, #project2, #project3, #newProject").sortable({
         connectWith: ".sort",
         dropOnEmpty: false
     });
