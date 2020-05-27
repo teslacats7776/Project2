@@ -23,7 +23,7 @@ router.get("/api/projects", function(req, res) {
   });
 });
 
-// GET route for getting all of the projects
+// GET route for getting all of the tasks
 router.get("/api/tasks", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Task.findAll({raw:true}).then(function(result) {
@@ -32,7 +32,7 @@ router.get("/api/tasks", function(req, res) {
     });
   });
 
-  // GET route for getting all of the projects
+  // GET route for getting all of the users
 router.get("/api/users", function(req, res) {
   // findAll returns all entries for a table when used with no options
   db.User.findAll({raw:true}).then(function(result) {
@@ -41,7 +41,24 @@ router.get("/api/users", function(req, res) {
   });
 });
 
-  // GET route for getting all of the projects
+  // GET route for getting one of the users
+  router.get("/api/users/:email", function(req, res) {
+    db.User.findOne({
+      raw:true,
+      where: {
+        email: req.params.email,
+      },
+      attributes: {
+        exclude: ["password"],
+      },
+      include: [db.ProjectMember]
+      }).then(function(result) {
+      // We have access to the user as an argument inside of the callback function
+      res.json(result);
+    });
+  });
+
+  // GET route for getting all of the projectmembers
   router.get("/api/projectmembers", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.ProjectMember.findAll({raw:true}).then(function(result) {
