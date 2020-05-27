@@ -136,23 +136,30 @@ li {
     cursor: move;
 }
 
-#add-form,
-.btn-small {
-    margin-bottom: 3vh;
+input::placeholder {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
 }
+
+input.team-value {
+    font-family: 'Raleway', sans-serif;
+}
+
+
 
 #add-form {
     display: flex;
     justify-content: space-between;
 }
 
+#add-form,
+.btn-small {
+    margin-bottom: 3vh;
+}
+
 .plus {
     padding-right: 0.15vw;
  
-}
-
-input::placeholder {
-    font-family: 'Playfair Display', serif;
 }
 
 li i{

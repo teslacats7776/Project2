@@ -140,6 +140,7 @@ li {
 }
 
 
+
 #add-task-form,
 .btn-small {
     margin-bottom: 3vh;
@@ -152,7 +153,10 @@ li {
 
 .plus {
     padding-right: 0.15vw;
- 
+}
+
+input.txtb {
+    font-family: 'Raleway', sans-serif;
 }
 
 input::placeholder {
