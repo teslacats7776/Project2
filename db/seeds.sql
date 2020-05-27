@@ -1,6 +1,6 @@
 --  header space 
  
---  Mock Project Managers 
+--  Mock Users
  INSERT INTO Users (first_name, last_name, manager, email, password)
  VALUES ("John", "Smith", true, "js@gmail", "123456"),
 ("Jane", "Jones", true, "jj@gmail", "123456"),
@@ -25,13 +25,16 @@ VALUES ("Project 1"),
 
 
 -- Mock Tasks 
-INSERT INTO Tasks (task_name)
-VALUES ("Models"),
-("Set up heroku database"),
-("Convert vanilla jScript to jQuery"),
-("Set Up Routes"),
-("Set Up Server"),
-("User Interface"),
-("Design"),
-("Front End Javascript"),
-("Handlebars")
+INSERT INTO Tasks (task_name, status, ProjectId, UserId)
+VALUES ("Models", "waiting", 1, 2),
+("Set up heroku", "assigned", 1, 2),
+("Convert to jQuery", "active", 2, 3),
+("Set Up Routes", "done", 2, 3),
+("Set Up Server", "waiting", 3, 5),
+("User Interface", "assigned", 1, 4),
+("Design", "active", 1, 4)
+
+--  Mock Project Members
+ INSERT INTO ProjectMembers (ProjectId, UserId)
+ VALUES (1, 2),
+(2, 1)

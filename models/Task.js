@@ -11,12 +11,15 @@ module.exports = function (sequelize, DataTypes) {
         len: [2]
       }
     },
-    task_comment: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [2]
-      }
+    status: {
+      type: DataTypes.ENUM,
+      values: [
+        'waiting',
+        'assigned',
+        'active',
+        'done'
+      ],
+      defaultValue: 'waiting'
    },
   }, 
       { timestamps: false },
@@ -25,9 +28,9 @@ module.exports = function (sequelize, DataTypes) {
     // associating Tasks to Projects and Team Members
     Task.associate = function(models){
       // Each Task belongs to one Project
-      models.Task.belongsTo(models.Project)
+      Task.belongsTo(models.Project)
       // Each Task belongs to one Team Member
-      models.Task.belongsTo(models.User)
+      Task.belongsTo(models.User)
     }
 
     return Task;

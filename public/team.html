@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jQUERY  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
@@ -29,13 +29,13 @@
         <div class="col s6 title left blue-text">tuesday.com</div>
         <!-- BURGER MENU  -->
         <div class="row right-align burger">
-          <a href="#" data-activates="dropdown" class="row dropdown-button blue-text">
+          <a id="test" href="#" data-activates="dropdown" class="row btn white dropdown-button blue-text" data-target="dropdown">
             <i class="material-icons">menu</i>
           </a>
           <ul class="right-align dropdown-content" id="dropdown">
-            <li><a class="blue-text" href="index.html">Home</a></li>
+            <li><a class="pink-text" href="index.html">Home</a></li>
             <li><a class="blue-text" href="manager.html">Project Managers</a></li>
-            <li><a class="grey-text" href="team.html">Team Members</a></li>
+            <li><a class="blue-text" href="team.html">Team Members</a></li>
           </ul>
         </div>
         <!-- MAIN NAVBAR MENU  -->
@@ -43,8 +43,7 @@
             <div>
               <ul>
                 <li><a class="blue-text" href="index.html">Home</a></li>
-                <li><a class="blue-text" href="manager.html">Project Managers</a></li>
-                <li><a class="green-text" href="team.html">Team Members</a></li>
+                <li><a class="green-text" href="team.html">Team Member Page</a></li>
               </ul>
             </div>
         </div> 
@@ -63,10 +62,61 @@
 
     <!-- BODY  -->
     <div class="container bodyContainer">  
-        <h5 class = "right-align">Team Member Page</h5>
+      <h5 class="right-align" id="projectName">Project Name</h5>
 
+      <!-- CARDS -->
+      <div class="row cardRow col sm12">
 
+        <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Waiting...</span>
+            <hr>
+            <ol id="waiting" class="sort">
+            <li>Draggable!<i class="tiny material-icons"id="del">delete_forever</i></li>
+          </ol>
+          </div>         
+          <a href="#" class="btn-floating right blue btn-small" id="openForm">
+            <i class="small material-icons">add</i></a>
+            <div id="add-task-form">
+              <input type="text" class="task-value txtb blue-grey-text center" placeholder="Add a task">
+              <a href="#" class="btn-floating right blue btn-small" id="addTask">
+                <i class="material-icons plus">add</i></a>
+          </div>
+         </div>
 
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Assigned</span>
+            <hr>
+            <ol id="assigned" class="sort">
+              <li>This is the first task<i class="tiny material-icons"id="del">delete_forever</i></li>
+              <li>This is another task<i class="tiny material-icons"id="del">delete_forever</i></li>
+          </ol>
+          </div>         
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Active</span>
+            <hr>
+            <ol id="active" class="sort">
+              <li>This is the first task<i class="tiny material-icons"id="del">delete_forever</i></li>
+              <li>This is another task<i class="tiny material-icons"id="del">delete_forever</i></li>
+          </ol>
+          </div>
+         </div>
+
+         <div class="card white col sm3">
+          <div class="card-content blue-grey-text">
+            <span class="card-title center">Done</span>
+            <hr>
+            <ul class="sort" id="done">
+              <li>This is the first task<i class="tiny material-icons"id="del">delete_forever</i></li>
+              <li>This is another task<i class="tiny material-icons"id="del">delete_forever</i></li>
+            </ul>
+          </div>
+         </div>
+      </div> <!-- end row -->
 
     </div> <!-- end body container --> 
 
@@ -82,12 +132,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
     <!-- SDKs for Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <!-- jQUERY UI FOR DRAG AND DROP -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- Materialize JavaScript  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <!-- javaScript file -->
-    <script type="text/javascript" src="./js/main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+   <!-- Compiled and minified JavaScript - keep this one for the dropdown menu-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+   <!--keep this one for authentication-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <!-- javaScript files -->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/team.js"></script>
+    <script type="text/javascript" src="./js/dragndrop.js"></script>
 
 </body>
 </html>
