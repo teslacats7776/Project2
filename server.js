@@ -1,7 +1,6 @@
 // Header space for easier readability
 
 var express = require ("express");
-var path = require('path');
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -17,8 +16,10 @@ app.use(express.json());
 var db = require("./models");
 
 // Import routes and give the server access to them.
- var routes = require("./routes/routes.js");
- app.use(routes);
+ var router = require("./routes/routes.js");
+ var htmlRoutes = require("./routes/htmlroutes.js")
+ app.use(router);
+ app.use(htmlRoutes);
 
 
 // Syncing our sequelize models and then starting our express app

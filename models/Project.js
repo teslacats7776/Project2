@@ -24,8 +24,6 @@ module.exports = function (sequelize, DataTypes) {
   // Each Project belongs to A Project Manager
   Project.belongsTo(models.User, { as: "ProjectManager" }),
   
-  // models.Project.hasMany(models.ProjectMembers),
-  
   // Each Project can have many Tasks
   Project.hasMany(models.Task, {
     onDelete: "cascade"
