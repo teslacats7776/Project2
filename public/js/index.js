@@ -50,7 +50,7 @@ const setupUI = (user) => {
 // setup materialize components
 $(document).ready(function(){
 
-  
+  $("#dropdownbtn").dropdown()
 
   var modals = document.querySelectorAll('.modal');
   M.Modal.init(modals);
