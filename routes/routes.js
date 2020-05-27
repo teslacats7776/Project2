@@ -11,9 +11,43 @@ var router = express.Router();
 
 // Require the models
 var db = require("../models");
+var path = require("path");
+// Routes
+router.get("/", function (req, res) {
+  console.log("Inside root route");
+  res.sendFile(path.join(__dirname , "../public/home.html"));
+})
 
 // Routes
+router.get("/team", function (req, res) {
+   
+  res.sendFile(path.join(__dirname , "../public/team.html"));
+})
 
+router.get("/manager", function (req, res) {
+   
+  res.sendFile(path.join(__dirname , "../public/manager.html"));
+})
+
+
+
+
+// Post to user table
+router.post("/api/newuser", function (req, res) {
+  console.log("Inside new user");
+
+  db.User.create({
+      userName: req.body.userName,
+      password: req.body.password,
+      first_name: req.body.firstName,
+      last_name:req.body.lastName,
+      email:req.body.email
+  }).then(function (result) {
+      console.log("Inserted into user table");
+  }).catch(function (err) {
+      console.log(err);
+  })
+})
 // GET route for getting all of the projects
 router.get("/api/projects", function(req, res) {
   // findAll returns all entries for a table when used with no options

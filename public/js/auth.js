@@ -73,7 +73,27 @@ auth.onAuthStateChanged(user => {
     // get user info
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
+    //insert mysql new user start
+
+ 
+// New obj creation
+    var newUser = {
+      userName: signupForm['signup-username'].value,
+      password: signupForm['signup-password'].value,
+      firstName: signupForm['signup-firstname'].value,
+      lastName: signupForm['signup-lastname'].value,
+      email: signupForm['signup-email'].value
+  }
   
+  // Post values to User table
+  $.ajax("/api/newuser", {
+      type: "POST",
+      data: newUser
+  }).then(function () {
+      console.log("Inserted to table");
+      alert("Congrats! You have created an account with us!");
+  })
+  //insert mysql new user end
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
       return db.collection ('users').doc(cred.user.uid).set({ 
@@ -111,7 +131,7 @@ auth.onAuthStateChanged(user => {
     // get user info
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
-  
+    document.getElementById('loginUserName').value=loginForm['login-username'].value;
     // log the user in
     auth.signInWithEmailAndPassword(email, password).then((cred) => {
       // close the signup modal & reset form
@@ -120,4 +140,7 @@ auth.onAuthStateChanged(user => {
       loginForm.reset();
     });
   
+
+
   });
+
