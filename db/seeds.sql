@@ -2,18 +2,18 @@
  
 --  Mock Users
  INSERT INTO Users (first_name, last_name, manager, email, password)
- VALUES ("John", "Smith", true, "js@gmail", "123456"),
-("Jane", "Jones", true, "jj@gmail", "123456"),
-("Julie", "Prince", true, "jp@gmail", "123456"),
-("Mary", "Mack", false, "mem@gmail", "123456"),
-("Mo", "Nance", false, "mn@gmail", "123456"),
-("Matt", "Murphy", false, "mm@gmail", "123456"),
-("Nick", "Ramos", false, "nr@gmail", "123456"),
-("Noel", "Cooper", false, "nc@gmail", "123456"),
-("Nat", "Plath", false, "np@gmail", "123456"),
-("Paul", "Tack", false, "pt@gmail", "123456"),
-("Pam", "Updike", false, "pu@gmail", "123456"),
-("Pat", "Perry", false, "pp@gmail", "123456");
+ VALUES ("John", "Smith", true, "js@gmail.com", "123456"),
+("Jane", "Jones", true, "jj@gmail.com", "123456"),
+("Julie", "Prince", true, "jp@gmail.com", "123456"),
+("Mary", "Mack", false, "mem@gmail.com", "123456"),
+("Mo", "Nance", false, "mn@gmail.com", "123456"),
+("Matt", "Murphy", false, "mm@gmail.com", "123456"),
+("Nick", "Ramos", false, "nr@gmail.com", "123456"),
+("Noel", "Cooper", false, "nc@gmail.com", "123456"),
+("Nat", "Plath", false, "np@gmail.com", "123456"),
+("Paul", "Tack", false, "pt@gmail.com", "123456"),
+("Pam", "Updike", false, "pu@gmail.com", "123456"),
+("Pat", "Perry", false, "pp@gmail.com", "123456");
 
 -- Mock Projects 
 INSERT INTO Projects (project_name)
