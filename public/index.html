@@ -9,13 +9,13 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
     <!-- MEDIA QUERIES CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/media.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
     <!-- FAVICON -->
-    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
     <title>tuesday.com</title>
 </head>
 <body>
@@ -32,17 +32,17 @@
                 <i class="material-icons">menu</i>
               </a>
               <ul class="right-align dropdown-content" id="dropdown">
-                <li><a class="pink-text" href="index.html">Home</a></li>
-                <li><a class="blue-text" href="manager.html">Project Managers</a></li>
-                <li><a class="blue-text" href="team.html">Team Members</a></li>
+                <li><a class="pink-text" href="/">Home</a></li>
+                <li><a class="blue-text" href="/manager">Project Managers</a></li>
+                <li><a class="blue-text" href="/team">Team Members</a></li>
               </ul>
             </div>
       <!-- MAIN NAVBAR MENU  -->
         <div class="col s6 blue-text navMenu">
           <div>
             <ul>
-              <li><a id="manager" class="logged-in blue-text" href="manager.html" style="display: none;">Project Managers</a></li>
-              <li><a class="logged-in blue-text" href="team.html" style="display: none;">Team Members</a></li>
+              <li><a id="manager" class="logged-in blue-text" href="/manager" style="display: none;">Project Managers</a></li>
+              <li><a class="logged-in blue-text" href="/team" style="display: none;">Team Members</a></li>
               <li class="logged-in" style="display: none;">
                 <a href="#" class="blue-text modal-trigger" data-target="modal-account">Account</a>
               </li>
@@ -58,6 +58,9 @@
               <li class="logged-out" style="display: none;">
                 <a href="#" class="blue-text modal-trigger" data-target="modal-signup">Sign up</a>
               </li>
+              <li class="logged-in" style="display: none;">
+                <button type="submit" class="btn btn-primary" id="login-btn">View Projects</button>
+            </li>
             </ul>
           </div>
       </div> 
@@ -69,7 +72,7 @@
     <!-- TOP BLUE BORDER   -->
     <div class="row blue blueBorder">
       <div class="container">
-        <img id="logo" class="left" src="./images/logo.png" alt="logo">
+        <img id="logo" class="left" src="/images/logo.png" alt="logo">
         <p class="white-text tagline">...because three day weekends</p>
       </div>
     </div>
@@ -82,28 +85,40 @@
   <!-- SIGN UP MODAL -->
   <div id="modal-signup" class="modal">
     <div class="modal-content">
-      <h4>Sign up</h4><br />
-      <form id="signup-form">
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
+        <h4>Sign up</h4><br />
+        <form id="signup-form">
+            <div class="input-field">
+                <input type="text" id="signup-username" required />
+                <label for="signup-username">User Name</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="signup-firstname" required />
+              <label for="signup-firstname">First Name</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="signup-lastname" required />
+            <label for="signup-lastname">Last Name</label>
         </div>
-        <div class="input-field">
-          <input type="password" id="signup-password" required />
-          <label for="signup-password">Choose password</label>
-        </div>
-        <div class="input-field">
-          <input type="text" id="signup-bio" required />
-          <label for="signup-bio">One Line Bio</label>
-        </div>
-        <div class="input-field">
-          <input type="text" id="signup-role" required />
-          <label for="signup-role">Role</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-      </form>
+            <div class="input-field">
+                <input type="email" id="signup-email" required />
+                <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="signup-password" required />
+                <label for="signup-password">Choose password</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="signup-bio" required />
+                <label for="signup-bio">One Line Bio</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="signup-role" required />
+                <label for="signup-role">Role</label>
+            </div>
+            <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        </form>
     </div>
-  </div>
+</div>
   <!-- CREATE & MANAGE USER MODAL -->
   <div id="modal-create" class="modal">
     <div class="modal-content">
@@ -119,20 +134,24 @@
   <!-- LOGIN MODAL -->
   <div id="modal-login" class="modal">
     <div class="modal-content">
-      <h4>Login</h4><br />
-      <form id="login-form">
-        <div class="input-field">
-          <input type="email" id="login-email" required />
-          <label for="login-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="login-password" required />
-          <label for="login-password">Your password</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
-      </form>
+        <h4>Login</h4><br />
+        <form id="login-form">
+            <div class="input-field">
+                <input type="text" id="login-username" required />
+                <label for="login-username">User Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="login-email" required />
+                <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="login-password" required />
+                <label for="login-password">Your password</label>
+            </div>
+            <button class="btn yellow darken-2 z-depth-0">Login</button>
+        </form>
     </div>
-  </div>
+</div>
      <!-- ACCOUNT MODAL -->
   <div id="modal-account" class="modal">
     <div class="modal-content center-align">
@@ -145,34 +164,50 @@
       <div class="slideshow center-align">
         <div id="slideshow">
           <div class="slide">
-            <img class="responsive-img pics center-align" src="./images/infographics/one.jpg" alt ="">
+            <img class="responsive-img pics center-align" src="/images/infographics/one.jpg" alt ="">
             <p class="left-align caption1"></p>
           </div>
           <div class="slide">
-            <img class="responsive-img pics" src="./images/infographics/six.jpg" alt ="">
+            <img class="responsive-img pics" src="/images/infographics/six.jpg" alt ="">
             <p class="left-align green-text caption2"></p>
           </div>
           <div class="slide">
-            <img class="responsive-img pics" src="./images/infographics/three.jpg" alt ="">
+            <img class="responsive-img pics" src="/images/infographics/three.jpg" alt ="">
             <p class="left-align caption3"></p>
           </div>
           <div class="slide">
-            <img class="responsive-img pics" src="./images/infographics/four.jpg" alt ="">
+            <img class="responsive-img pics" src="/images/infographics/four.jpg" alt ="">
             <p class="left-align caption4"></p>
           </div>
           <div class="slide">
-            <img class="responsive-img pics" src="./images/infographics/five.jpg" alt ="">
+            <img class="responsive-img pics" src="/images/infographics/five.jpg" alt ="">
             <p class="left-align caption5"></p>
           </div>
           <div class="slide">
-            <img class="responsive-img pics" src="./images/infographics/two.jpg" alt ="">
+            <img class="responsive-img pics" src="/images/infographics/two.jpg" alt ="">
             <p class="left-align caption6"></p>
           </div>
         </div>
       </div>       <!-- end slideshow -->
 
     </div> <!-- end bodyContainer --> 
+    <div id="LoginForm" style="display: none;">
+      <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+              <h4>View your Projects</h4><br />
+              <form>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">USERNAME</label>
+                      <input type="text" class="form-control" id="loginUserName">
+                  </div>
 
+                  <button type="submit" class="btn btn-primary" id="login-btn">View</button>
+              </form>
+          </div>
+          <div class="col-md-2"></div>
+      </div>
+  </div>
 
     
   <!-- MAIN PAGE USER REVIEWS -->
@@ -227,8 +262,8 @@
   <!--keep this one for authentication-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
   <!-- javascript file --> 
-  <script src="./js/auth.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/index.js"></script>
 
  
 </body>
