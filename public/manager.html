@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jQUERY  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- MATERIALIZE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
@@ -63,17 +63,17 @@
     </div>
 
     <!-- BODY  -->
-    <div class="container bodyContainer">
+    <div class="container bodyContainer row col s12">
         <h5 class = "right-align" id="manager">Project Manager's Name</h5>
 
-<!-- CARDS -->
-<div class="row cardRow col sm12">
+    <!-- CARDS -->
+    <div class="row cardRow">
 
-  <div class="card white col sm3 waiting">
+  <div class="card white col sm3">
     <div class="card-content blue-grey-text">
-      <span class="card-title center">Project One</span>
+      <span class="card-title center"><h6>Available <br> Team Members</h6></span>
       <hr>
-      <ol id="project1" class="sort">
+      <ol id="available" class="sort">
       <li>John Smith<i class="tiny material-icons"id="del">delete_forever</i></li>
     </ol>
     </div>         
@@ -88,20 +88,20 @@
 
    <div class="card white col sm3">
     <div class="card-content blue-grey-text">
-      <span class="card-title center">Project Two</span>
+      <span class="card-title center">Project One</span>
       <hr>
-      <ol id="project2" class="sort">
+      <ol id="project1" class="sort">
         <li>Grace Jones<i class="tiny material-icons"id="del">delete_forever</i></li>
         <li>Tom Ford<i class="tiny material-icons"id="del">delete_forever</i></li>
     </ol>
-    </div>         
+    </div>
    </div>
 
    <div class="card white col sm3">
     <div class="card-content blue-grey-text">
-      <span class="card-title center">Project Three</span>
+      <span class="card-title center">Project Two</span>
       <hr>
-      <ol id="project3" class="sort">
+      <ol id="project2" class="sort">
         <li>Ricky Ricardo<i class="tiny material-icons"id="del">delete_forever</i></li>
         <li>Jimmy Hendrix<i class="tiny material-icons"id="del">delete_forever</i></li>
     </ol>
@@ -110,9 +110,9 @@
 
    <div class="card white col sm3">
     <div class="card-content blue-grey-text">
-      <span class="card-title center">Project Four</span>
+      <span class="card-title center">Project Three</span>
       <hr>
-      <ul id="project4" class="sort">
+      <ul id="project3" class="sort">
         <li>Alice Cooper<i class="tiny material-icons"id="del">delete_forever</i></li>
         <li>Martha Stewart<i class="tiny material-icons"id="del">delete_forever</i></li>
       </ul>
@@ -129,11 +129,6 @@
         </ul>
       </div>
 
-
-
-
-
-
     </div> <!-- end body container -->
 
     <!-- FOOTER  -->
@@ -144,19 +139,23 @@
       </div>
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
-    <!-- SDKs for Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
-    <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <!-- SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+  <!-- jQUERY UI FOR DRAG AND DROP -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--Import jQuery before materialize.js-->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
   <!-- Compiled and minified JavaScript - keep this one for the dropdown menu-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <!--keep this one for authentication-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-    <!-- javaScript files -->
-    <script type="text/javascript" src="./js/index.js"></script>
-    <script type="text/javascript" src="./js/manager.js"></script>
+  <!-- javaScript files -->
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/manager.js"></script>
+  <script type="text/javascript" src="./js/dragndrop.js"></script>
 
 </body>
 </html>

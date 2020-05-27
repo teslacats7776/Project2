@@ -29,17 +29,13 @@ $(document).ready(function(){
       });
 
       team.append(del);
-      $("#project1").append(team);
+      $("#available").append(team);
         //to clear the input
       $(".txtb").val("");
     }
     $("#add-form").hide();
     $("#openForm").show();
   });
-
-
-
-
 
 
 }); //end document.ready
