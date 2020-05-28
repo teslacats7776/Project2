@@ -19,14 +19,14 @@ password: {
 },
     first_name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [2]
       }
     },
     last_name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [2]
       }
@@ -34,7 +34,7 @@ password: {
     manager: {
       type: DataTypes.BOOLEAN,
       default: false,
-      allowNull: true,
+      allowNull: false,
     },
      email: {
        type: DataTypes.STRING,

@@ -1,7 +1,6 @@
 // header space 
 
 $("#add-form").hide();
-$(".cardRowDup").hide();
 
 $(document).ready(function(){
 
@@ -42,8 +41,8 @@ $(document).ready(function(){
   $("#addProject").on("click",function(){
 
       var project = $(
-        "<div class='card white col sm3 card-content cardRowDup blue-grey-text'><span class='card-title center'><h6>New Project</h6></span><hr><ol id='newProject' class='sort'><li>Jayne Doe<i class='tiny material-icons'id='del'>delete_forever</i></li></ol></div>"
-        );
+        "<div class='card white col sm3 card-content blue-grey-text'><span class='card-title center'><h6>New Project</h6></span><hr><ol id='newProject' class='sort'><li>Jayne Doe<i class='tiny material-icons'id='del'>delete_forever</i></li></ol></div>"
+        ).text($(".txtb").val().trim());
       var del = $("<i class='tiny material-icons'>delete_forever</i>").click(function(){
         var card = $(this).parent();
         card.fadeOut(function(){
@@ -51,22 +50,13 @@ $(document).ready(function(){
         });
       });
 
-      $(".cardRowDup").show();
-      $(".cardRowDup").append(project);
+      $(".cardRow").append(project);
       project.append(del);
+      
+
   });
 
-  $(document).on("click", ".mgrLink", function(){
-    $.get("/manager").then(function(user){
-      var table = $("<ol>");
-      var first = $("<li>").text(user.first_name);
-      var last = $("<li>").text(user.last_name);
-      table.append(first, last);
-      $("#available").append(table);
-      console.log(user);
-    });
-  });
+
+
 
 }); //end document.ready
-
-// var button= $("<button>").attr({"data-movieid":movie.id,"id":'Add'}).text("ADD to Favorites")
