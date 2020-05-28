@@ -10,9 +10,6 @@ var path = require("path");
 // Create the express router, and export at the end of this file
 var htmlRoutes = express.Router();
 
-// Require the models
-var db = require("../models");
-
 // Routes
 
 htmlRoutes.get("/", function(req,res){
