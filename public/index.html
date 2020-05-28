@@ -34,11 +34,7 @@
               <ul class="right-align dropdown-content" id="dropdown">
                 <li><a class="pink-text" href="/">Home</a></li>
                 <li><a class="blue-text" href="/manager">Project Managers</a></li>
-<<<<<<< HEAD:public/index.html
                 <li><a class="blue-text" href="/team">Team Members</a></li>
-=======
-                <li><a class="blue-text" href="/teampage">Team Members</a></li>
->>>>>>> upstream/master:html/index.html
               </ul>
             </div>
       <!-- MAIN NAVBAR MENU  -->
@@ -46,25 +42,21 @@
           <div>
             <ul>
               <li><a id="manager" class="logged-in blue-text" href="/manager" style="display: none;">Project Managers</a></li>
-<<<<<<< HEAD:public/index.html
               <li><a class="logged-in blue-text" href="/team" style="display: none;">Team Members</a></li>
-=======
-              <li><a class="logged-in blue-text" href="/teampage" style="display: none;">Team Members</a></li>
->>>>>>> upstream/master:html/index.html
               <li class="logged-in" style="display: none;">
-                <a href="/" class="blue-text modal-trigger" data-target="modal-account">Account</a>
+                <a href="#" class="blue-text modal-trigger" data-target="modal-account">Account</a>
               </li>
               <li class="logged-in" style="display: none;">
-                <a href="/" class="blue-text" id="logout">Logout</a>
+                <a href="#" class="blue-text" id="logout">Logout</a>
               </li>
               <li class="admin" style="display: none;">
-                <a href="/" class="grey-text modal-trigger" data-target="modal-create">Manage User</a>
+                <a href="#" class="grey-text modal-trigger" data-target="modal-create">Manage User</a>
               </li>
               <li class="logged-out" style="display: none;">
-                <a href="/" class="blue-text modal-trigger" data-target="modal-login">Login</a>
+                <a href="#" class="blue-text modal-trigger" data-target="modal-login">Login</a>
               </li>
               <li class="logged-out" style="display: none;">
-                <a href="/" class="blue-text modal-trigger" data-target="modal-signup">Sign up</a>
+                <a href="#" class="blue-text modal-trigger" data-target="modal-signup">Sign up</a>
               </li>
               <li class="logged-in" style="display: none;">
                 <button type="submit" class="btn btn-primary" id="login-btn">View Projects</button>
@@ -130,12 +122,12 @@
   <!-- CREATE & MANAGE USER MODAL -->
   <div id="modal-create" class="modal">
     <div class="modal-content">
-  <!-- ADMIN ACTIONS -->
-  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display:none;">
-   <input type="email" placeholder="User email" id="admin-email" required />
-   <button id="makeAdmin" class="btn-small yellow darken-2 z-depth-0">Make admin</button>
-   <button id="removeAdmin" class="btn-small yellow darken-2 z-depth-0">Remove admin</button>
-  </form>
+      <!-- ADMIN ACTIONS -->
+ <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display:none;">
+  <input type="email" placeholder="User email" id="admin-email" required />
+  <button id="makeAdmin" class="btn-small yellow darken-2 z-depth-0">Make admin</button>
+  <button id="removeAdmin" class="btn-small yellow darken-2 z-depth-0">Remove admin</button>
+</form>
     </div>
   </div>
 
@@ -159,14 +151,8 @@
             <button class="btn yellow darken-2 z-depth-0">Login</button>
         </form>
     </div>
-<<<<<<< HEAD:public/index.html
 </div>
      <!-- ACCOUNT MODAL -->
-=======
-  </div>
-
-  <!-- ACCOUNT MODAL -->
->>>>>>> upstream/master:html/index.html
   <div id="modal-account" class="modal">
     <div class="modal-content center-align">
       <h4>Account details</h4><br />
@@ -175,7 +161,6 @@
   </div>
 
   <!-- MAIN PAGE SLIDESHOW  -->
-<<<<<<< HEAD:public/index.html
       <div class="slideshow center-align">
         <div id="slideshow">
           <div class="slide">
@@ -216,38 +201,6 @@
                       <label for="exampleInputEmail1">USERNAME</label>
                       <input type="text" class="form-control" id="loginUserName">
                   </div>
-=======
-  <div class="slideshow center-align">
-    <div id="slideshow">
-      <div class="slide">
-        <img class="responsive-img pics center-align" src="./images/infographics/one.jpg" alt ="">
-        <p class="left-align caption1"></p>
-      </div>
-      <div class="slide">
-        <img class="responsive-img pics" src="./images/infographics/six.jpg" alt ="">
-        <p class="left-align green-text caption2"></p>
-      </div>
-      <div class="slide">
-        <img class="responsive-img pics" src="./images/infographics/three.jpg" alt ="">
-        <p class="left-align caption3"></p>
-      </div>
-      <div class="slide">
-        <img class="responsive-img pics" src="./images/infographics/four.jpg" alt ="">
-        <p class="left-align caption4"></p>
-      </div>
-      <div class="slide">
-        <img class="responsive-img pics" src="./images/infographics/five.jpg" alt ="">
-        <p class="left-align caption5"></p>
-      </div>
-      <div class="slide">
-        <img class="responsive-img pics" src="./images/infographics/two.jpg" alt ="">
-        <p class="left-align caption6"></p>
-      </div>
-    </div>
-  </div>       <!-- end slideshow -->
-
-  </div> <!-- end bodyContainer --> 
->>>>>>> upstream/master:html/index.html
 
                   <button type="submit" class="btn btn-primary" id="login-btn">View</button>
               </form>
@@ -268,13 +221,13 @@
     <div class="col s12 grey-text darken-3 italic center-align review3">"It's the second best site I've ever seen!" &nbsp -Your Mom</div>
   </div>
 
-  <!-- FOOTER  -->
-  <div class="row blue footer">
-    <div class="container">
-        <div class="col s6 footerText white-text col-s2"><div class="card-panel blue left">&copy &nbsp Copyright 2020</div></div>
-        <div class="col s6 footerText white-text col-s-5"><div class="card-panel blue right">Christina Tarango, Ticia Rodela & Jennifer Kruk</div></div>
+    <!-- FOOTER  -->
+    <div class="row blue footer">
+      <div class="container">
+          <div class="col s6 footerText white-text col-s2"><div class="card-panel blue left">&copy &nbsp Copyright 2020</div></div>
+          <div class="col s6 footerText white-text col-s-5"><div class="card-panel blue right">Christina Tarango, Ticia Rodela & Jennifer Kruk</div></div>
+      </div>
     </div>
-  </div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
@@ -306,19 +259,11 @@
   <!--Import jQuery before materialize.js-->
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<<<<<<< HEAD:public/index.html
   <!--keep this one for authentication-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
   <!-- javascript file --> 
   <script src="/js/auth.js"></script>
   <script src="/js/index.js"></script>
-=======
- <!--keep this one for authentication-->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
- <!-- javascript file --> 
- <script src="./js/auth.js"></script>
- <script src="./js/index.js"></script>
->>>>>>> upstream/master:html/index.html
 
  
 </body>
