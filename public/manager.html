@@ -10,13 +10,13 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/manager.css">
+    <link rel="stylesheet" type="text/css" href="/css/manager.css">
     <!-- MEDIA QUERIES CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/media.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
     <!-- FAVICON -->
-    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
     <title>tuesday.com</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
       <ul class="right-align dropdown-content" id="dropdown">
         <li><a class="pink-text" href="/">Home</a></li>
         <li><a class="blue-text" href="/manager">Project Managers</a></li>
-        <li><a class="blue-text" href="/teampage">Team Members</a></li>
+        <li><a class="blue-text" href="/team">Team Members</a></li>
       </ul>
     </div>
       <!-- MAIN NAVBAR MENU  -->
@@ -44,8 +44,8 @@
           <div>
             <ul>
               <li><a class="blue-text" href="/">Home</a></li>
-              <li><a class="orange-text mgrLink" href="#">Project Manager Page</a></li>
-              <li><a class="blue-text" href="/teampage">Team Member Page</a></li>
+              <li><a class="orange-text" href="/manager">Project Manager Page</a></li>
+              <li><a class="blue-text" href="/team">Team Member Page</a></li>
             </ul>
           </div>
       </div> 
@@ -57,7 +57,7 @@
   <!-- TOP BLUE BORDER   -->
   <div class="row blue blueBorder">
     <div class="container">
-      <img id="logo" class="left" src="./images/logo.png" alt="logo">
+      <img id="logo" class="left" src="/images/logo.png" alt="logo">
       <p class="white-text tagline">...because three day weekends</p>
     </div>
   </div>
@@ -112,16 +112,14 @@
     <div class="card-content blue-grey-text">
       <span class="card-title center">Project Three</span>
       <hr>
-      <ol id="project3" class="sort">
+      <ul id="project3" class="sort">
         <li>Alice Cooper<i class="tiny material-icons"id="del">delete_forever</i></li>
         <li>Martha Stewart<i class="tiny material-icons"id="del">delete_forever</i></li>
-      </ol>
+      </ul>
     </div>
    </div>
 
 </div> <!-- end row -->
-
-<div class="row cardRowDup"></div>
 
 
   <!-- FIXED ACTION BUTTON -->
@@ -157,9 +155,9 @@
   <!--keep this one for authentication-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
   <!-- javaScript files -->
-  <script type="text/javascript" src="./js/index.js"></script>
-  <script type="text/javascript" src="./js/manager.js"></script>
-  <script type="text/javascript" src="./js/dragndrop.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript" src="/js/manager.js"></script>
+  <script type="text/javascript" src="/js/dragndrop.js"></script>
 
 </body>
 </html>

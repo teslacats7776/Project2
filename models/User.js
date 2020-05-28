@@ -3,7 +3,20 @@
 
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User",
-   {
+   { userName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+        len: [5, 10]
+    }
+},
+password: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+        len: [5, 10]
+    }
+},
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,24 +33,18 @@ module.exports = function (sequelize, DataTypes) {
     },
     manager: {
       type: DataTypes.BOOLEAN,
-      default: true,
+      default: false,
       allowNull: false,
     },
      email: {
        type: DataTypes.STRING,
-       allowNull: false,
+       allowNull: true,
        unique: true,
        validate: {
          isEmail: true
        }
      },
-     password: {
-       type: DataTypes.STRING,
-       allowNull: false,
-       validate: {
-         len: [6]
-       }
-     },
+   
     }, 
   { timestamps: false },
   );
@@ -45,11 +52,11 @@ module.exports = function (sequelize, DataTypes) {
     // associating Team Members to Project Managers, Projects, Tasks and Role
     User.associate = function(models){
       // Each Team Member has one Project
-      User.hasOne(models.Project)
+      User.hasOne(models.Project, { onDelete: 'cascade' })
       // Each Team Member has one Task
-      User.hasOne(models.Task)
+      User.hasOne(models.Task,{ onDelete: 'cascade' })
       // User has many project members
-      User.hasMany(models.ProjectMember)
+      User.hasMany(models.ProjectMember, { onDelete: 'cascade' })
     }
     
   return User;

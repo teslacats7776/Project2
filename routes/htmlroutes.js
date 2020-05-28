@@ -6,6 +6,7 @@
 // Require Express for the router
 var express = require("express");
 var path = require("path");
+// test for merging conflicts
 
 // Create the express router, and export at the end of this file
 var htmlRoutes = express.Router();
