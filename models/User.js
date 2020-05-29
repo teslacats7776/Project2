@@ -34,7 +34,7 @@ password: {
     manager: {
       type: DataTypes.BOOLEAN,
       default: false,
-      allowNull: false,
+      allowNull: true,
     },
      email: {
        type: DataTypes.STRING,
@@ -54,6 +54,7 @@ password: {
       // Each Team Member has one Project
       User.hasOne(models.Project, { onDelete: 'cascade' })
       // Each Team Member has one Task
+      
       User.hasOne(models.Task,{ onDelete: 'cascade' })
       // User has many project members
       User.hasMany(models.ProjectMember, { onDelete: 'cascade' })
