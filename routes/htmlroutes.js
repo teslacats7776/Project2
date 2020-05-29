@@ -1,7 +1,5 @@
 //    header space
 
-// THESE ARE OUR API ROUTES
-
 
 // Require Express for the router
 var express = require("express");
@@ -28,4 +26,3 @@ htmlRoutes.get("/teampage", function(req,res){
 
 // Export routes for server.js to use.
 module.exports = htmlRoutes;
-
